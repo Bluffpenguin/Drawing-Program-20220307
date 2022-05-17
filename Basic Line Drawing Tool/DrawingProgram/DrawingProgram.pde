@@ -19,7 +19,7 @@ void setup()
 //
 void draw() 
 {
-  if ( draw==true ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
+  if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
 }//End Draw
 //
 void keyPressed() {
