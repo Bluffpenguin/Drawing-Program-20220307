@@ -1,4 +1,6 @@
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+int size;
+String quitText="Quit";
 //
 void buttonQuit() 
 {
@@ -16,5 +18,15 @@ void buttonQuit()
     quitButtonColour = black;
   }//End Hoverover
   //
-  text()
+  fill(black); //Ink
+  textAlign (CENTER, CENTER);
+  size = 40;
+  textFont(font, size);
+  text(quitText ,quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  fill(resetWhite);
 }//End buttonQuit
+//
+void buttonQuitmousePressed() 
+{
+  if(mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
+}

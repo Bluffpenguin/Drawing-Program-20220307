@@ -1,8 +1,9 @@
 //Global Variables
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
-int reset=1;
+int reset=1, initialFontSize=55;
 color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
+PFont font;
 //
 void setup() 
 {
@@ -37,6 +38,7 @@ void mousePressed()
       draw = false;
     }//End draw Boolean
   }//Button Paper (Drawing Surface)
+  buttonQuitmousePressed(); 
 }//End mousePressed
 //
 //End MAIN

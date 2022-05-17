@@ -11,4 +11,6 @@ void populationSetup()
   quitButtonY =displayHeight*0;
   quitButtonWidth =displayWidth*1/10;
   quitButtonHeight =displayHeight*1/20;
+  //
+  font = createFont ("Cordel", initialFontSize);
 }//End populationSetup
