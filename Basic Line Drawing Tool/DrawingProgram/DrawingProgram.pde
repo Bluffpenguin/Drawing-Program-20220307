@@ -1,6 +1,8 @@
 //Global Variables
 Boolean draw=false;
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
+int reset=1;
+color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
 //
 void setup() 
 {
@@ -8,11 +10,7 @@ void setup()
   // Mandatory: Mistaken display orientation should break app, feedback to console and CANVAS
   fullScreen(); //displayWidth, displayHeight
   //
-  //Population
-  drawingSurfaceX = displayWidth*0/4;
-  drawingSurfaceY = displayHeight*0/5;
-  drawingSurfaceWidth = displayWidth*3/4;
-  drawingSurfaceHeight = displayHeight*4/5;
+  populationSetup();
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 }//End Setup
@@ -20,9 +18,10 @@ void setup()
 void draw() 
 {
   //
-  //Drawing Tools
+  buttonQuit();
+  //Drawing Tools, with combined Boolean
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
-  if () ellipse( mouseX, mouseY, );//Circle Drawing Tool
+  if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );//Circle Drawing Tool
 }//End Draw
 //
 void keyPressed() {
