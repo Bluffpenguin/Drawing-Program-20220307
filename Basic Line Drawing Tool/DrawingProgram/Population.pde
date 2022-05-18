@@ -12,5 +12,10 @@ void populationSetup()
   quitButtonWidth =displayWidth*1/10;
   quitButtonHeight =displayHeight*1/20;
   //
+  secondTextX =displayWidth*9/10;
+  secondTextY =displayHeight*1/20;
+  secondTextWidth =displayWidth*1/10;
+  secondTextHeight =displayHeight*1/20;
+  //
   font = createFont ("Cordel", initialFontSize);
 }//End populationSetup

@@ -1,8 +1,9 @@
 //Global Variables
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
-int reset=1, initialFontSize=55;
+float secondTextX, secondTextY, secondTextWidth, secondTextHeight;nt reset=1, initialFontSize=55;
 color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
+String strokeText = "Wahoo!!!";
 PFont font;
 //
 void setup() 
@@ -20,6 +21,7 @@ void draw()
 {
   //
   buttonQuit();
+  strokebuttonDraw();
   //Drawing Tools, with combined Boolean
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );//Circle Drawing Tool
