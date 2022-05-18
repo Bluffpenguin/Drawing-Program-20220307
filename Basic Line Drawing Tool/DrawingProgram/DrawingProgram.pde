@@ -1,7 +1,8 @@
 //Global Variables
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
-float secondTextX, secondTextY, secondTextWidth, secondTextHeight;nt reset=1, initialFontSize=55;
+float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
+int reset=1, initialFontSize=55;
 color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
 String strokeText = "Wahoo!!!";
 PFont font;
