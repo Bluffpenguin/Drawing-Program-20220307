@@ -4,7 +4,7 @@ float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeigh
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset=1, initialFontSize=55;
 color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
-String strokeText = "Wahoo!!!";
+String strokeText = "Stroke";
 PFont font;
 //
 void setup() 
@@ -21,6 +21,7 @@ void setup()
 void draw() 
 {
   //
+  outlineDraw();
   buttonQuit();
   strokebuttonDraw();
   //Drawing Tools, with combined Boolean
@@ -31,17 +32,17 @@ void draw()
 void keyPressed() {
 }//End keyPressed
 //
-void mousePressed() 
+void mouseDragged() 
 {
   if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) 
   {
-    if (draw == false) {
-      draw = true;
-    } else {
-      draw = false;
-    }//End draw Boolean
+    draw = true;
   }//Button Paper (Drawing Surface)
-  buttonQuitmousePressed(); 
+  buttonQuitmousePressed();
 }//End mousePressed
+//
+void mouseReleased() {
+  draw=false;
+}
 //
 //End MAIN
