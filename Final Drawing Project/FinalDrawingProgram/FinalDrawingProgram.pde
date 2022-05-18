@@ -1,6 +1,11 @@
 //Global Variables
 Boolean draw=false;
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
+float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
+int reset=1, initialFontSize=55;
+color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
+String strokeText = "Wahoo!!!";
+PFont font;
 //
 void setup() 
 {
@@ -8,18 +13,19 @@ void setup()
   // Mandatory: Mistaken display orientation should break app, feedback to console and CANVAS
   fullScreen(); //displayWidth, displayHeight
   //
-  //Population
-  drawingSurfaceX = displayWidth*0/4;
-  drawingSurfaceY = displayHeight*0/5;
-  drawingSurfaceWidth = displayWidth*3/4;
-  drawingSurfaceHeight = displayHeight*4/5;
+  populationSetup();
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 }//End Setup
 //
 void draw() 
 {
-  if ( draw==true ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
+  //
+  buttonQuit();
+  strokebuttonDraw();
+  //Drawing Tools, with combined Boolean
+  if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
+  if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );//Circle Drawing Tool
 }//End Draw
 //
 void keyPressed() {
@@ -35,6 +41,7 @@ void mousePressed()
       draw = false;
     }//End draw Boolean
   }//Button Paper (Drawing Surface)
+  buttonQuitmousePressed(); 
 }//End mousePressed
 //
 //End MAIN
