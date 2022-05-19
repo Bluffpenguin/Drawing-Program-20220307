@@ -33,6 +33,10 @@ void populationSetup()
   quitButtonWidth =displayWidth*1/10;
   quitButtonHeight =displayHeight*1/20;
   //
+  colourButtonX =displayWidth*0;
+  colourButtonY =displayHeight*0;
+  colourButtonWidth =displayWidth*1/10;
+  colourButtonHeight =displayHeight*1/20;
   strokeTextX =displayWidth*0;
   strokeTextY =displayHeight*1/20;
   strokeTextWidth =displayWidth*1/10;
