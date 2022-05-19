@@ -31,6 +31,7 @@ void keyPressed() {
 //
 void mousePressed() 
 {
+  WahoomousePressed();
   if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) 
   {
     if (draw == false) {
@@ -39,7 +40,7 @@ void mousePressed()
       draw = false;
     }//End draw Boolean
   }//Button Paper (Drawing Surface)
-  buttonQuitmousePressed(); 
+  buttonQuitmousePressed();
 }//End mousePressed
 //
 //End MAIN
