@@ -1,10 +1,8 @@
 //Global Variables
 Boolean draw=false;
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset=1, initialFontSize=55;
 color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
-String strokeText = "Wahoo!!!";
 PFont font;
 //
 void setup() 
@@ -15,7 +13,7 @@ void setup()
   //
   populationSetup();
   //
-  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  pieceofPaper();
 }//End Setup
 //
 void draw() 
