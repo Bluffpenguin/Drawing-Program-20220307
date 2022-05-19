@@ -32,7 +32,7 @@ void draw()
 void keyPressed() {
 }//End keyPressed
 //
-void mouseDragged() 
+void mousePressed() 
 {
   if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) 
   {
