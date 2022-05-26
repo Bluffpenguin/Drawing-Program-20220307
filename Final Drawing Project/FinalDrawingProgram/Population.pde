@@ -41,7 +41,23 @@ void populationSetup()
   strokeTextY =displayHeight*1/20;
   strokeTextWidth =displayWidth*1/10;
   strokeTextHeight =displayHeight*1/20;
+  backgroundButtonX =displayWidth*1/10;
+  backgroundButtonY =displayHeight*0;
+  backgroundButtonWidth =displayWidth*1/10;
+  backgroundButtonHeight =displayHeight*1/20;
+  ShapeButtonX =displayWidth*1/10;
+  ShapeButtonY =displayHeight*1/20;
+  ShapeButtonWidth =displayWidth*1/10;
+  ShapeButtonHeight =displayHeight*1/20;
+  templateButtonX =displayWidth*2/10;
+  templateButtonY =displayHeight*0;
+  templateButtonWidth =displayWidth*1/10;
+  templateButtonHeight =displayHeight*2/20;
   //
+  colourOverlayX =displayWidth*0;
+  colourOverlayY =displayHeight*2/20;
+  colourOverlayWidth =displayWidth*3/10;
+  colourOverlayHeight =displayHeight*4/20;
   //
   font = createFont ("Cordel", initialFontSize);
 }//End populationSetup

@@ -1,5 +1,6 @@
 float colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight;
 String colorText = "Colour";
+Boolean colourOverlay=true;
 //
 void colourButtonDraw() 
 {
@@ -9,6 +10,13 @@ void colourButtonDraw()
   textAlign (CENTER, CENTER);
   size = 40;
   textFont(font, size);
-  text(colourText ,strokeTextX, strokeTextY, strokeTextWidth, strokeTextHeight);
+  text(colorText, colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
   fill(resetWhite);
+  //
+  
+  if (colourOverlay==true) 
+  {
+    colorOverlayDraw();
+  }
+  
 }//End colourButtonDraw
