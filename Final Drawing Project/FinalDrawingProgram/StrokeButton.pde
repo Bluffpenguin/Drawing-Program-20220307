@@ -1,4 +1,5 @@
 float strokeTextX, strokeTextY, strokeTextWidth, strokeTextHeight;
+String strokeText = "Stroke";
 //
 void strokebuttonDraw() {
   //Second Rectangle with More Text

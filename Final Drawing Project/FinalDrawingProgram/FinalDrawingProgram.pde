@@ -4,7 +4,6 @@ float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeigh
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset=1, initialFontSize=55;
 color resetWhite=255, red=#FF0303, black=0, quitButtonColour;
-String strokeText = "Stroke";
 PFont font;
 //
 void setup() 
