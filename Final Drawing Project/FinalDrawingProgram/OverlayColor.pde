@@ -1,4 +1,13 @@
 float colourOverlayX, colourOverlayY, colourOverlayWidth, colourOverlayHeight;
+float colourRedX, colourRedY, colourRedWidth, colourRedHeight;
+float colourBlueX, colourBlueY, colourBlueWidth, colourBlueHeight;
+float colourGreenX, colourGreenY, colourGreenWidth, colourGreenHeight;
+float colourYellowX, colourYellowY, colourYellowWidth, colourYellowHeight;
+float colourPurpleX, colourPurpleY, colourPurpleWidth, colourPurpleHeight;
+float colourBrownX, colourBrownY, colourBrownWidth, colourBrownHeight;
+float colourGreyX, colourGreyY, colourGreyWidth, colourGreyHeight;
+float colourWhiteX, colourWhiteY, colourWhiteWidth, colourWhiteHeight;
+float colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight;
 //
 void colorOverlayDraw() 
 {

@@ -58,6 +58,10 @@ void populationSetup()
   colourOverlayY =displayHeight*2/20;
   colourOverlayWidth =displayWidth*3/10;
   colourOverlayHeight =displayHeight*4/20;
+  colourRedX =;
+  colourRedY =;
+  colourRedWidth =;
+  colourRedHeight =;
   //
   font = createFont ("Cordel", initialFontSize);
 }//End populationSetup

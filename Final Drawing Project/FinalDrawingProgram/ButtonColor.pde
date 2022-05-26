@@ -13,7 +13,6 @@ void colourButtonDraw()
   text(colorText, colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
   fill(resetWhite);
   //
-  
   if (colourOverlay==true) 
   {
     colorOverlayDraw();
