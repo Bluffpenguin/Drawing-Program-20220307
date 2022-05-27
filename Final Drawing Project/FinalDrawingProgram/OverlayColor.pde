@@ -8,6 +8,9 @@ float colourBrownX, colourBrownY, colourBrownWidth, colourBrownHeight;
 float colourGreyX, colourGreyY, colourGreyWidth, colourGreyHeight;
 float colourWhiteX, colourWhiteY, colourWhiteWidth, colourWhiteHeight;
 float colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight;
+float lineBX, lineBY, lineBWidth, lineBHeight;
+float sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight;
+float eraserX, eraserY, eraserWidth, eraserHeight;
 //
 void colorOverlayDraw() 
 {
@@ -22,4 +25,9 @@ void colorOverlayDraw()
   rect(colourGreyX, colourGreyY, colourGreyWidth, colourGreyHeight);
   rect(colourWhiteX, colourWhiteY, colourWhiteWidth, colourWhiteHeight);
   rect(colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight);
+  //Tools
+  rect(lineBX, lineBY, lineBWidth, lineBHeight);
+  rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
+  rect(eraserX, eraserY, eraserWidth, eraserHeight);
+  
 }

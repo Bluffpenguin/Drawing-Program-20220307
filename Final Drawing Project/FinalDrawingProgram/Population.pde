@@ -58,10 +58,57 @@ void populationSetup()
   colourOverlayY =displayHeight*2/20;
   colourOverlayWidth =displayWidth*3/10;
   colourOverlayHeight =displayHeight*4/20;
-  colourRedX =;
-  colourRedY =;
-  colourRedWidth =;
-  colourRedHeight =;
+  colourRedX =displayWidth*0.1/10;
+  colourRedY =displayHeight*2.3/20;
+  colourRedWidth =displayWidth*0.7/20;
+  colourRedHeight =displayHeight*1/20;
+  colourBlueX =displayWidth*0.1/10;
+  colourBlueY =displayHeight*3.6/20;
+  colourBlueWidth =displayWidth*0.7/20;
+  colourBlueHeight =displayHeight*1/20;
+  colourGreenX =displayWidth*0.1/10;
+  colourGreenY =displayHeight*4.9/20;
+  colourGreenWidth =displayWidth*0.7/20;
+  colourGreenHeight =displayHeight*1/20;
+  //
+  colourYellowX =displayWidth*1/20;
+  colourYellowY =displayHeight*2.3/20;
+  colourYellowWidth =displayWidth*0.7/20;
+  colourYellowHeight =displayHeight*1/20;
+  colourPurpleX =displayWidth*1/20;
+  colourPurpleY =displayHeight*3.6/20;
+  colourPurpleWidth =displayWidth*0.7/20;
+  colourPurpleHeight =displayHeight*1/20;  
+  colourBrownX =displayWidth*1/20;
+  colourBrownY =displayHeight*4.9/20;
+  colourBrownWidth =displayWidth*0.7/20;
+  colourBrownHeight =displayHeight*1/20;
+  //
+  colourGreyX =displayWidth*1.8/20;
+  colourGreyY =displayHeight*2.3/20;
+  colourGreyWidth =displayWidth*0.7/20;
+  colourGreyHeight =displayHeight*1/20;
+  colourWhiteX =displayWidth*1.8/20;
+  colourWhiteY =displayHeight*3.6/20;
+  colourWhiteWidth =displayWidth*0.7/20;
+  colourWhiteHeight =displayHeight*1/20;
+  colourBlackX =displayWidth*1.8/20;
+  colourBlackY =displayHeight*4.9/20;
+  colourBlackWidth =displayWidth*0.7/20;
+  colourBlackHeight =displayHeight*1/20;
+  //
+  lineBX =displayWidth*2.6/20;
+  lineBY =displayHeight*2/20;
+  lineBWidth =displayWidth*3.4/20;
+  lineBHeight =displayHeight*1.3333/20;
+  sprinkleX =displayWidth*2.6/20;
+  sprinkleY =displayHeight*3.3333/20;
+  sprinkleWidth =displayWidth*3.4/20;
+  sprinkleHeight =displayHeight*1.3333/20;
+  eraserX =displayWidth*2.6/20;
+  eraserY =displayHeight*4.6666/20;
+  eraserWidth =displayWidth*3.4/20;
+  eraserHeight =displayHeight*1.3333/20;
   //
   font = createFont ("Cordel", initialFontSize);
 }//End populationSetup
