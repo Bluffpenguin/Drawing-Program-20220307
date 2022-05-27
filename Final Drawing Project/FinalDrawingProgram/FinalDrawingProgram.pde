@@ -3,7 +3,7 @@ Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset=1, initialFontSize=55;
-color quitButtonColour, resetWhite=255, red=#FF0303, black=0, blue=#0F5CF2, green=#47BC2E, yellow=#F2FA19, purple=#B620F2, brown=#795E23, grey=#B7B4AE;
+color quitButtonColour, drawColor, resetWhite=255, red=#FF0303, black=0, blue=#0F5CF2, green=#47BC2E, yellow=#F2FA19, purple=#B620F2, brown=#795E23, grey=#B7B4AE;
 PFont font;
 //
 void setup() 
@@ -28,6 +28,7 @@ void draw()
   buttomShapeDraw();
   buttomTemplateDraw();
   //Drawing Tools, with combined Boolean
+  fill(drawColor);
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) line( mouseX, mouseY, pmouseX, pmouseY );//End Line Draw
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );//Circle Drawing Tool
 }//End Draw

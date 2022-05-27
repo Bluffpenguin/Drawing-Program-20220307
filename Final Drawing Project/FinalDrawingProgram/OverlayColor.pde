@@ -12,6 +12,7 @@ float lineBX, lineBY, lineBWidth, lineBHeight;
 float sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight;
 float eraserX, eraserY, eraserWidth, eraserHeight;
 String lineText = "Line", sprinkleText = "Sprinkle", eraserText = "Eraser";
+boolean Red=false, Blue=false, Green=false, Yellow=false, Purple=false, Brown=false, Grey=false, White=false, Black=true;
 //
 void colorOverlayDraw() 
 {
@@ -35,7 +36,7 @@ void colorOverlayDraw()
   rect(colourWhiteX, colourWhiteY, colourWhiteWidth, colourWhiteHeight);
   fill(black);
   rect(colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight);
-  
+
   //Tools
   fill(resetWhite);
   rect(lineBX, lineBY, lineBWidth, lineBHeight);
@@ -51,3 +52,19 @@ void colorOverlayDraw()
   text(eraserText, eraserX, eraserY, eraserWidth, eraserHeight);
   fill(resetWhite);
 }
+//
+void colormousePressed() 
+{
+  if (mouseX>=colourRedX && mouseX<=colourRedX+colourRedWidth && mouseY>=colourRedY && mouseY<=colourRedY+colourRedHeight) 
+  {
+    Blue=false;
+    Green=false;
+    Yellow=false;
+    Purple=false;
+    Brown=false;
+    Grey=false;
+    White=false;
+    Black=false;
+    Red=true;
+  }
+}//End colormousePressed
