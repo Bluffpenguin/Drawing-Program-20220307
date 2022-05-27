@@ -11,23 +11,43 @@ float colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight;
 float lineBX, lineBY, lineBWidth, lineBHeight;
 float sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight;
 float eraserX, eraserY, eraserWidth, eraserHeight;
+String lineText = "Line", sprinkleText = "Sprinkle", eraserText = "Eraser";
 //
 void colorOverlayDraw() 
 {
   rect(colourOverlayX, colourOverlayY, colourOverlayWidth, colourOverlayHeight);
   //Colours
+  fill(red);
   rect(colourRedX, colourRedY, colourRedWidth, colourRedHeight);
+  fill(blue);
   rect(colourBlueX, colourBlueY, colourBlueWidth, colourBlueHeight);
+  fill(green);
   rect(colourGreenX, colourGreenY, colourGreenWidth, colourGreenHeight);
+  fill(yellow);
   rect(colourYellowX, colourYellowY, colourYellowWidth, colourYellowHeight);
+  fill(purple);
   rect(colourPurpleX, colourPurpleY, colourPurpleWidth, colourPurpleHeight);
+  fill(brown);
   rect(colourBrownX, colourBrownY, colourBrownWidth, colourBrownHeight);
+  fill(grey);
   rect(colourGreyX, colourGreyY, colourGreyWidth, colourGreyHeight);
+  fill(resetWhite);
   rect(colourWhiteX, colourWhiteY, colourWhiteWidth, colourWhiteHeight);
+  fill(black);
   rect(colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight);
+  
   //Tools
+  fill(resetWhite);
   rect(lineBX, lineBY, lineBWidth, lineBHeight);
   rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
   rect(eraserX, eraserY, eraserWidth, eraserHeight);
-  
+  fill(black); //ink
+  //Text
+  textAlign (CENTER, CENTER);
+  size = 40;
+  textFont(font, size);
+  text(lineText, lineBX, lineBY, lineBWidth, lineBHeight);
+  text(sprinkleText, sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
+  text(eraserText, eraserX, eraserY, eraserWidth, eraserHeight);
+  fill(resetWhite);
 }
