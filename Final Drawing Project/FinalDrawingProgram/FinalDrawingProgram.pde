@@ -46,7 +46,7 @@ void mousePressed()
     draw = true;
   }//Button Paper (Drawing Surface)
   buttonQuitmousePressed();
-  colormousePressed();
+  if (colourOverlay==true) colormousePressed();
 }//End mousePressed
 //
 void mouseReleased() {

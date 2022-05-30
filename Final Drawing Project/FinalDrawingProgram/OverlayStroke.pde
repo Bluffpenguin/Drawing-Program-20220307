@@ -1,0 +1,4 @@
+//
+void overlayStrokeDraw() 
+{
+}//End overlayStrokeDraw
