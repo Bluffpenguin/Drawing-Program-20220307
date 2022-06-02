@@ -110,5 +110,27 @@ void populationSetup()
   eraserWidth =displayWidth*3.4/20;
   eraserHeight =displayHeight*1.3333/20;
   //
+  strokeOverlayX=displayWidth*0;
+  strokeOverlayY =displayHeight*6/20;
+  strokeOverlayWidth =displayWidth*3/10;
+  strokeOverlayHeight =displayHeight*4/20;
+  stroke1X=displayWidth*0.1/10;
+  stroke1Y=displayHeight*6.3/20;
+  stroke1Width=displayWidth*2.4/20;
+  stroke1Height=displayHeight*1/20;
+  stroke2X=displayWidth*0.1/10;
+  stroke2Y=displayHeight*7.6/20;
+  stroke2Width=displayWidth*2.4/20;
+  stroke2Height=displayHeight*1/20;
+  stroke3X=displayWidth*0.1/10;
+  stroke3Y=displayHeight*8.9/20;
+  stroke3Width=displayWidth*2.4/20;
+  stroke3Height=displayHeight*1/20;
+  line1X=displayWidth*0.2/10;
+  line2X=displayWidth*2.4/20;
+  line1Y=displayHeight*6.8/20;
+  line2Y=displayHeight*8.2/20;
+  line3Y=displayHeight*9.4/20;
+  //
   font = createFont ("Cordel", initialFontSize);
 }//End populationSetup
