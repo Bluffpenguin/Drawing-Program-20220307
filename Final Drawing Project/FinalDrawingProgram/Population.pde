@@ -131,6 +131,27 @@ void populationSetup()
   line1Y=displayHeight*6.8/20;
   line2Y=displayHeight*8.2/20;
   line3Y=displayHeight*9.4/20;
+  
+  strokeInput1X =displayWidth*3.1/20;
+  strokeInput1Y =displayHeight*8.1/20;
+  strokeInput1Width =displayWidth*0.5/20;
+  strokeInput1Height =displayHeight*0.8/20;
+  strokeInput2X =displayWidth*3.7/20;
+  strokeInput2Y =displayHeight*8.1/20;
+  strokeInput2Width =displayWidth*0.5/20;
+  strokeInput2Height =displayHeight*0.8/20;
+  strokeInput3X =displayWidth*4.4/20;
+  strokeInput3Y =displayHeight*8.1/20;
+  strokeInput3Width =displayWidth*0.5/20;
+  strokeInput3Height =displayHeight*0.8/20;
+  strokeInput4X =displayWidth*5/20;
+  strokeInput4Y =displayHeight*8.1/20;
+  strokeInput4Width =displayWidth*0.5/20;
+  strokeInput4Height =displayHeight*0.8/20;
+  strokeCounterX=displayWidth;
+  strokeCounterY=displayHeight;
+  strokeCounterWidth=displayWidth;
+  strokeCounterHeight=displayHeight;
   //
   font = createFont ("Cordel", initialFontSize);
 }//End populationSetup
