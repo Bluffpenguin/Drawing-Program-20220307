@@ -30,11 +30,13 @@ void draw()
   buttomShapeDraw();
   buttomTemplateDraw();
   if (strokeOverlay==true) overlayStrokeDraw();
+  if (backgroundOverlay==true) overlayBackgroundDraw();
   //Drawing Tools, with combined Boolean
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) {
     stroke(drawColor);
     strokeWeight(strokeSize);
     line( mouseX, mouseY, pmouseX, pmouseY );
+    strokeWeight(reset);
     stroke(reset);
   }//End Line Draw
   //if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );//Circle Drawing Tool

@@ -2,9 +2,9 @@
 void populationSetup() 
 {
   drawingSurfaceX = displayWidth*3/10;
-  drawingSurfaceY = displayHeight*2/20;
+  drawingSurfaceY = displayHeight*2.5/20;
   drawingSurfaceWidth = displayWidth*3/4;
-  drawingSurfaceHeight = displayHeight*4/5;
+  drawingSurfaceHeight = displayHeight*15/20;
   drawingDiameter = displayWidth*1/100;
   //
   TbarX =displayWidth*0;
@@ -22,11 +22,11 @@ void populationSetup()
   musicDisplayX =displayWidth*3/10;
   musicDisplayY =displayHeight*0;
   musicDisplayWidth =displayWidth*7/10;
-  musicDisplayHeight =displayHeight*2/20;
+  musicDisplayHeight =displayHeight*2.5/20;
   templateDisplayX =displayWidth*3/10;
-  templateDisplayY =displayHeight*18/20;
+  templateDisplayY =displayHeight*17.5/20;
   templateDisplayWidth =displayWidth*7/10;
-  templateDisplayHeight =displayHeight*2/20;
+  templateDisplayHeight =displayHeight*2.5/20;
   //
   quitButtonX =displayWidth*0;
   quitButtonY =displayHeight*19/20;
@@ -153,5 +153,55 @@ void populationSetup()
   strokeCounterWidth=displayWidth*1.2/20;
   strokeCounterHeight=displayHeight*0.8/20;
   //
-  font = createFont ("Cordel", initialFontSize);
+  backgroundOverlayX =displayWidth*0;
+  backgroundOverlayY =displayHeight*10/20;
+  backgroundOverlayWidth =displayWidth*3/10;
+  backgroundOverlayHeight =displayHeight*4/20;
+  backgroundTitleX=displayWidth*0;
+  backgroundTitleY=displayHeight*10/20;
+  backgroundTitleWidth=displayWidth*3/10;
+  backgroundTitleHeight=displayHeight*0.80/20;
+  backgroundRedX =displayWidth*0;
+  backgroundRedY =displayHeight*11/20;
+  backgroundRedWidth =displayWidth*1/10;
+  backgroundRedHeight =displayHeight*1/20;
+  backgroundBlueX =displayWidth*0;
+  backgroundBlueY =displayHeight*12/20;
+  backgroundBlueWidth =displayWidth*1/10;
+  backgroundBlueHeight =displayHeight*1/20;
+  backgroundGreenX =displayWidth*0;
+  backgroundGreenY =displayHeight*13/20;
+  backgroundGreenWidth =displayWidth*1/10;
+  backgroundGreenHeight =displayHeight*1/20;
+  backgroundYellowX =displayWidth*1/10;
+  backgroundYellowY =displayHeight*11/20;
+  backgroundYellowWidth =displayWidth*1/10;
+  backgroundYellowHeight =displayHeight*1/20;
+  backgroundPurpleX =displayWidth*1/10;
+  backgroundPurpleY =displayHeight*12/20;
+  backgroundPurpleWidth =displayWidth*1/10;
+  backgroundPurpleHeight =displayHeight*1/20;
+  backgroundBrownX =displayWidth*1/10;
+  backgroundBrownY =displayHeight*13/20;
+  backgroundBrownWidth =displayWidth*1/10;
+  backgroundBrownHeight =displayHeight*1/20;
+  backgroundGreyX =displayWidth*2/10;
+  backgroundGreyY =displayHeight*11/20;
+  backgroundGreyWidth =displayWidth*1/10;
+  backgroundGreyHeight =displayHeight*1/20;
+  backgroundWhiteX =displayWidth*2/10;
+  backgroundWhiteY =displayHeight*12/20;
+  backgroundWhiteWidth =displayWidth*1/10;
+  backgroundWhiteHeight =displayHeight*1/20;
+  backgroundBlackX =displayWidth*2/10;
+  backgroundBlackY =displayHeight*13/20;
+  backgroundBlackWidth =displayWidth*1/10;
+  backgroundBlackHeight =displayHeight*1/20;
+  //
+  shapeOverlayX =displayWidth*0;
+  shapeOverlayY =displayHeight*14/20;
+  shapeOverlayWidth =displayWidth*3/10;
+  shapeOverlayHeight =displayHeight*4/20;
+  //
+  font = createFont ("Corbel", initialFontSize);
 }//End populationSetup
