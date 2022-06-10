@@ -222,6 +222,14 @@ void populationSetup()
   triangleY =displayHeight*16.5/20;
   triangleWidth =displayWidth*1.2/20;
   triangleHeight =displayHeight*1.2/20;
+  counterShapeX=displayWidth*4/20;
+  counterShapeY=displayHeight*15.5/20;
+  counterShapeWidth=displayWidth*1/20;
+  counterShapeHeight=displayHeight*1.5/20;
+  lowShapeX=displayWidth;
+  lowShapeY=displayHeight;
+  lowShapeWidth=displayWidth;
+  lowShapeHeight=displayHeight;
   //
   font = createFont ("Corbel", initialFontSize);
 }//End populationSetup
