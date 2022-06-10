@@ -202,10 +202,26 @@ void populationSetup()
   shapeOverlayY =displayHeight*14/20;
   shapeOverlayWidth =displayWidth*3/10;
   shapeOverlayHeight =displayHeight*4/20;
-  lineX =displayWidth;
-  lineY =displayHeight;
-  lineWidth =displayWidth;
-  lineHeight =displayHeight;
+  shapeTitleX=displayWidth*0;
+  shapeTitleY=displayHeight*14.1/20;
+  shapeTitleWidth=displayWidth*3/10;
+  shapeTitleHeight=displayHeight*0.80/20;
+  lineX =displayWidth*0.4/20;
+  lineY =displayHeight*15.2/20;
+  lineWidth =displayWidth*1.2/20;
+  lineHeight =displayHeight*1.2/20;
+  cirleX =displayWidth*0.4/20;
+  circleY =displayHeight*16.5/20;
+  circleWidth =displayWidth*1.2/20;
+  circleHeight =displayHeight*1.2/20;
+  squareX =displayWidth*1.8/20;
+  squareY =displayHeight*15.2/20;
+  squareWidth =displayWidth*1.2/20;
+  squareHeight =displayHeight*1.2/20;
+  triangleX =displayWidth*1.8/20;
+  triangleY =displayHeight*16.5/20;
+  triangleWidth =displayWidth*1.2/20;
+  triangleHeight =displayHeight*1.2/20;
   //
   font = createFont ("Corbel", initialFontSize);
 }//End populationSetup
