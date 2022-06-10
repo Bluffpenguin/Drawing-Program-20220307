@@ -1,6 +1,5 @@
 float colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight;
 String colorText = "Colour";
-Boolean colourOverlay=true;
 //
 void colourButtonDraw() 
 {

@@ -1,6 +1,5 @@
 float backgroundButtonX, backgroundButtonY, backgroundButtonWidth, backgroundButtonHeight;
 String backgroundText = "Background";
-Boolean backgroundOverlay=true;
 //
 void buttonBackgroundDraw () {
   fill(resetWhite);

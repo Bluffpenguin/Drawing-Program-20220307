@@ -1,6 +1,5 @@
 float strokeTextX, strokeTextY, strokeTextWidth, strokeTextHeight;
 String strokeText = "Stroke";
-boolean strokeOverlay=false;
 //
 void strokebuttonDraw() {
   if (mouseX>=strokeTextX && mouseX<=strokeTextX+strokeTextWidth && mouseY>=strokeTextY && mouseY<=strokeTextY+strokeTextHeight) {

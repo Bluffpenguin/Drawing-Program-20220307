@@ -202,6 +202,10 @@ void populationSetup()
   shapeOverlayY =displayHeight*14/20;
   shapeOverlayWidth =displayWidth*3/10;
   shapeOverlayHeight =displayHeight*4/20;
+  lineX =displayWidth;
+  lineY =displayHeight;
+  lineWidth =displayWidth;
+  lineHeight =displayHeight;
   //
   font = createFont ("Corbel", initialFontSize);
 }//End populationSetup
