@@ -2,12 +2,13 @@
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
+float squareDrawWidth, squareDrawHeight;
 int reset=1, initialFontSize=55, strokeSize=2, shapeSize=1;
 color quitButtonColour, drawColor, resetWhite=255, red=#FF0303, redHO=#952F2F, black=0, blackHO=#5A5956, blue=#0F5CF2, blueHO=#071D90, green=#47BC2E, greenHO=#388635, yellow=#F2FA19, yellowHO=#96A010, purple=#B620F2, purpleHO=#5D0B98, brown=#795E23, brownHO=#5A3F0B, grey=#B7B4AE, greyHO=#484746, whiteHO=#D8D5CD;
-color buttonHO=#CBC9C3;
+color buttonHO=#CBC9C3, bgColour;
 PFont font;
 boolean shapesOverlay=true, strokeOverlay=false, colourOverlay=true, backgroundOverlay=true, lineDraw=false, circleDraw=true, squareDraw=false, triangleDraw=false;
-
+boolean Redbg=false, Bluebg=false, Greenbg=false, Yellowbg=false, Purplebg=false, Brownbg=false, Greybg=false, Whitebg=true, Blackbg=false;
 //
 void setup() 
 {
@@ -35,15 +36,18 @@ void draw()
   if (shapesOverlay==true) overlayShapeDraw();
   //Drawing Tools, with combined Boolean
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight ) {
-    if (lineDraw==true) {stroke(drawColor);} else {stroke(reset);}
+    if (lineDraw==true) {
+      stroke(drawColor);
+    } else {
+      stroke(reset);
+    }
     strokeWeight(strokeSize);
-    color(drawColor);
+    fill(drawColor);
     if (lineDraw==true) line( mouseX, mouseY, pmouseX, pmouseY );
-    color(brown);
     if (circleDraw==true) ellipse( mouseX, mouseY, drawingDiameter*shapeSize, drawingDiameter*shapeSize);
-    //if (squareDraw==true) rect();
+    if (squareDraw==true) rect(mouseX, mouseY, squareDrawWidth*shapeSize/2, squareDrawHeight*shapeSize/2);
     //if (triangleDraw==true) triangle();
-    color(resetWhite);
+    fill(resetWhite);
     strokeWeight(reset);
     stroke(reset);
   }//End Line Draw
@@ -63,6 +67,7 @@ void mousePressed()
   strokebuttonmousePressed();
   if (colourOverlay==true) colormousePressed();
   if (shapesOverlay==true) overlayShapemousePressed();
+  if (backgroundOverlay==true) backgroundmousePressed();
 }//End mousePressed
 //
 void mouseReleased() {

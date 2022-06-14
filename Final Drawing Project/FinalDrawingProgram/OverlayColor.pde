@@ -114,6 +114,27 @@ void colorOverlayDraw()
   rect(lineBX, lineBY, lineBWidth, lineBHeight);
   rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
   rect(eraserX, eraserY, eraserWidth, eraserHeight);
+  if (mouseX>=lineBX && mouseX<=lineBX+lineBWidth && mouseY>=lineBY && mouseY<=lineBY+lineBHeight) {
+    fill(buttonHO);
+    rect(lineBX, lineBY, lineBWidth, lineBHeight);
+  } else {
+    fill(resetWhite);
+    rect(lineBX, lineBY, lineBWidth, lineBHeight);
+  }
+  if (mouseX>=sprinkleX && mouseX<=sprinkleX+sprinkleWidth && mouseY>=sprinkleY && mouseY<=sprinkleY+sprinkleHeight) {
+    fill(buttonHO);
+    rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
+  } else {
+    fill(resetWhite);
+    rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
+  }
+  if (mouseX>=eraserX && mouseX<=eraserX+eraserWidth && mouseY>=eraserY && mouseY<=eraserY+eraserHeight) {
+    fill(buttonHO);
+    rect(eraserX, eraserY, eraserWidth, eraserHeight);
+  } else {
+    fill(resetWhite);
+    rect(eraserX, eraserY, eraserWidth, eraserHeight);
+  }
   fill(black); //ink
   //Text
   textAlign (CENTER, CENTER);
@@ -291,4 +312,5 @@ void colormousePressed()
     White=false;
     Black=true;
   }
+  if (mouseX>=eraserX && mouseX<=eraserX+eraserWidth && mouseY>=eraserY && mouseY<=eraserY+eraserHeight) drawColor=color(bgColour);
 }//End colormousePressed

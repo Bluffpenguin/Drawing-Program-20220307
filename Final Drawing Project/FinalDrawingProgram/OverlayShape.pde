@@ -1,6 +1,5 @@
 //Global Variables
 float shapeOverlayX, shapeOverlayY, shapeOverlayWidth, shapeOverlayHeight;
-float cirleDrawX, circleDrawY, circleDrawWidth, circleDrawHeight, squareDrawX, squareDrawY, squareDrawWidth, squareDrawHeight, triangleDrawiX, triangleDrawY, triangleDrawWidth, triangleDrawHeight;
 float cirleX, circleY, circleWidth, circleHeight, squareX, squareY, squareWidth, squareHeight, triangleX, triangleY, triangleWidth, triangleHeight, lineX, lineY, lineWidth, lineHeight;
 float shapeTitleX, shapeTitleY, shapeTitleWidth, shapeTitleHeight, counterTitleX, counterTitleY, counterTitleWidth, counterTitleHeight, counterDisplayX, counterDisplayY, counterDisplayWidth, counterDisplayHeight;
 float counterShapeX, counterShapeY, counterShapeWidth, counterShapeHeight, lowShapeX, lowShapeY, lowShapeWidth, lowShapeHeight, highShapeX, highShapeY, highShapeWidth, highShapeHeight;
@@ -103,9 +102,7 @@ void overlayShapeDraw() {
 //
 //
 void overlayShapemousePressed() {
-  if (mouseX>=lowShapeX && mouseX<=lowShapeX+lowShapeWidth && mouseY>=lowShapeY && mouseY<=lowShapeY+lowShapeHeight && shapeSize>1) {
-    shapeSize=shapeSize-1;
-  } else {shapeSize=shapeSize-int(0.1);}
+  if (mouseX>=lowShapeX && mouseX<=lowShapeX+lowShapeWidth && mouseY>=lowShapeY && mouseY<=lowShapeY+lowShapeHeight && shapeSize>1) shapeSize=shapeSize-1;
   if (mouseX>=highShapeX && mouseX<=highShapeX+highShapeWidth && mouseY>=highShapeY && mouseY<=highShapeY+highShapeHeight) shapeSize=shapeSize+1;
   if (mouseX>=lineX && mouseX<=lineX+lineWidth && mouseY>=lineY && mouseY<=lineY+lineHeight) {
     lineDraw=true;

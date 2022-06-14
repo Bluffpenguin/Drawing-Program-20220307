@@ -4,7 +4,7 @@ float strokeCounterX, strokeCounterY, strokeCounterWidth, strokeCounterHeight, s
 float line1X, line2X, line1Y, line2Y, line3Y;
 String strokeCounterT= "Size:" + strokeSize;
 //
-void overlayStrokeDraw() 
+void overlayStrokeDraw()
 {
   rect(strokeOverlayX, strokeOverlayY, strokeOverlayWidth, strokeOverlayHeight);
   //
@@ -68,6 +68,5 @@ void overlayStrokeDraw()
   //
   strokeWeight(reset);
   stroke(reset);
-  
-}//End overlayStrokeDraw
+} //End overlayStrokeDraw
 //

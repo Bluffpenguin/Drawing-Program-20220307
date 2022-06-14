@@ -6,6 +6,8 @@ void populationSetup()
   drawingSurfaceWidth = displayWidth*3/4;
   drawingSurfaceHeight = displayHeight*15/20;
   drawingDiameter = displayWidth*1/100;
+  squareDrawWidth=displayWidth*1/30;
+  squareDrawHeight=displayHeight*1/20;
   //
   TbarX =displayWidth*0;
   TbarY =displayHeight*0;
