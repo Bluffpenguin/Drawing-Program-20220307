@@ -5,7 +5,7 @@ void populationSetup()
   drawingSurfaceY = displayHeight*2.5/20;
   drawingSurfaceWidth = displayWidth*3/4;
   drawingSurfaceHeight = displayHeight*15/20;
-  drawingDiameter = displayWidth*1/100;
+  drawingDiameter = displayWidth*10/100;
   //
   TbarX =displayWidth*0;
   TbarY =displayHeight*0;
@@ -226,13 +226,21 @@ void populationSetup()
   counterShapeY=displayHeight*15.5/20;
   counterShapeWidth=displayWidth*1/20;
   counterShapeHeight=displayHeight*1.5/20;
-  lowShapeX=displayWidth*3.5/20;
+  counterTitleX=displayWidth*4/20;
+  counterTitleY=displayHeight*15.5/20;
+  counterTitleWidth=displayWidth*1/20;
+  counterTitleHeight=displayHeight*0.5/20;
+  counterDisplayX=displayWidth*4/20;
+  counterDisplayY=displayHeight*16/20; 
+  counterDisplayWidth=displayWidth*1/20;
+  counterDisplayHeight=displayHeight*1/20;
+  lowShapeX=displayWidth*4/20;
   lowShapeY=displayHeight*17.2/20;
-  lowShapeWidth=displayWidth*0.9/20;
+  lowShapeWidth=displayWidth*0.5/20;
   lowShapeHeight=displayHeight*0.6/20;
-  highShapeX=displayWidth*4.6/20;
+  highShapeX=displayWidth*4.5/20;
   highShapeY=displayHeight*17.2/20;
-  highShapeWidth=displayWidth*0.9/20;
+  highShapeWidth=displayWidth*0.5/20;
   highShapeHeight=displayHeight*0.6/20;
   //
   font = createFont ("Corbel", initialFontSize);
