@@ -226,10 +226,14 @@ void populationSetup()
   counterShapeY=displayHeight*15.5/20;
   counterShapeWidth=displayWidth*1/20;
   counterShapeHeight=displayHeight*1.5/20;
-  lowShapeX=displayWidth;
-  lowShapeY=displayHeight;
-  lowShapeWidth=displayWidth;
-  lowShapeHeight=displayHeight;
+  lowShapeX=displayWidth*3.5/20;
+  lowShapeY=displayHeight*17.2/20;
+  lowShapeWidth=displayWidth*0.9/20;
+  lowShapeHeight=displayHeight*0.6/20;
+  highShapeX=displayWidth*4.6/20;
+  highShapeY=displayHeight*17.2/20;
+  highShapeWidth=displayWidth*0.9/20;
+  highShapeHeight=displayHeight*0.6/20;
   //
   font = createFont ("Corbel", initialFontSize);
 }//End populationSetup
