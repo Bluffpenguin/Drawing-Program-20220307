@@ -19,10 +19,34 @@ void overlayShapeDraw() {
   text(shapeTitle, shapeTitleX, shapeTitleY, shapeTitleWidth, shapeTitleHeight);
   fill(resetWhite);
   //
-  rect(lineX, lineY, lineWidth, lineHeight);
-  rect(cirleX, circleY, circleWidth, circleHeight);
-  rect(squareX, squareY, squareWidth, squareHeight);
-  rect(triangleX, triangleY, triangleWidth, triangleHeight);
+  if (mouseX>=lineX && mouseX<=lineX+lineWidth && mouseY>=lineY && mouseY<=lineY+lineHeight || lineDraw==true) {
+    fill(buttonHO);
+    rect(lineX, lineY, lineWidth, lineHeight);
+  } else {
+    fill(resetWhite);
+    rect(lineX, lineY, lineWidth, lineHeight);
+  }
+  if (mouseX>=cirleX && mouseX<=cirleX+circleWidth && mouseY>=circleY && mouseY<=circleY+circleHeight || circleDraw==true) {
+    fill(buttonHO);
+    rect(cirleX, circleY, circleWidth, circleHeight);
+  } else {
+    fill(resetWhite);
+    rect(cirleX, circleY, circleWidth, circleHeight);
+  }
+  if (mouseX>=squareX && mouseX<=squareX+squareWidth && mouseY>=squareY && mouseY<=squareY+squareHeight || squareDraw==true) {
+    fill(buttonHO);
+    rect(squareX, squareY, squareWidth, squareHeight);
+  } else {
+    fill(resetWhite);
+    rect(squareX, squareY, squareWidth, squareHeight);
+  }
+  if (mouseX>=triangleX && mouseX<=triangleX+triangleWidth && mouseY>=triangleY && mouseY<=triangleY+triangleHeight || triangleDraw==true) {
+    fill(buttonHO);
+    rect(triangleX, triangleY, triangleWidth, triangleHeight);
+  } else {
+    fill(resetWhite);
+    rect(triangleX, triangleY, triangleWidth, triangleHeight);
+  }
   fill(black); //Ink
   textAlign (CENTER, CENTER);
   size = 45;
@@ -62,7 +86,7 @@ void overlayShapeDraw() {
   if (mouseX>=lowShapeX && mouseX<=lowShapeX+lowShapeWidth && mouseY>=lowShapeY && mouseY<=lowShapeY+lowShapeHeight) {
     fill(RedLowerButtonHO);
     rect(lowShapeX, lowShapeY, lowShapeWidth, lowShapeHeight);
-  } else if (Blue==false) {
+  } else {
     fill(RedLowerButton);
     rect(lowShapeX, lowShapeY, lowShapeWidth, lowShapeHeight);
   }
@@ -70,15 +94,42 @@ void overlayShapeDraw() {
   if (mouseX>=highShapeX && mouseX<=highShapeX+highShapeWidth && mouseY>=highShapeY && mouseY<=highShapeY+highShapeHeight) {
     fill(GreenHigherButtonHO);
     rect(highShapeX, highShapeY, highShapeWidth, highShapeHeight);
-  } else if (Blue==false) {
+  } else {
     fill(GreenHigherButton);
     rect(highShapeX, highShapeY, highShapeWidth, highShapeHeight);
   }
   fill(resetWhite);
 }//End ShapeDraw
 //
+//
 void overlayShapemousePressed() {
-  if (mouseX>=lowShapeX && mouseX<=lowShapeX+lowShapeWidth && mouseY>=lowShapeY && mouseY<=lowShapeY+lowShapeHeight) shapeSize=shapeSize-1;
+  if (mouseX>=lowShapeX && mouseX<=lowShapeX+lowShapeWidth && mouseY>=lowShapeY && mouseY<=lowShapeY+lowShapeHeight && shapeSize>1) {
+    shapeSize=shapeSize-1;
+  } else {shapeSize=shapeSize-int(0.1);}
   if (mouseX>=highShapeX && mouseX<=highShapeX+highShapeWidth && mouseY>=highShapeY && mouseY<=highShapeY+highShapeHeight) shapeSize=shapeSize+1;
+  if (mouseX>=lineX && mouseX<=lineX+lineWidth && mouseY>=lineY && mouseY<=lineY+lineHeight) {
+    lineDraw=true;
+    circleDraw=false;
+    squareDraw=false;
+    triangleDraw=false;
+  }
+  if (mouseX>=cirleX && mouseX<=cirleX+circleWidth && mouseY>=circleY && mouseY<=circleY+circleHeight) {
+    lineDraw=false;
+    circleDraw=true;
+    squareDraw=false;
+    triangleDraw=false;
+  }
+  if (mouseX>=squareX && mouseX<=squareX+squareWidth && mouseY>=squareY && mouseY<=squareY+squareHeight) {
+    lineDraw=false;
+    circleDraw=false;
+    squareDraw=true;
+    triangleDraw=false;
+  }
+  if (mouseX>=triangleX && mouseX<=triangleX+triangleWidth && mouseY>=triangleY && mouseY<=triangleY+triangleHeight) {
+    lineDraw=false;
+    circleDraw=false;
+    squareDraw=false;
+    triangleDraw=true;
+  }
   println(shapeSize);
 }//End shapeMousePressed

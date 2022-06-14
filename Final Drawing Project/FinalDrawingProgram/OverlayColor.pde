@@ -11,7 +11,7 @@ float colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight;
 float lineBX, lineBY, lineBWidth, lineBHeight;
 float sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight;
 float eraserX, eraserY, eraserWidth, eraserHeight;
-String lineText = "Line", sprinkleText = "Sprinkle", eraserText = "Eraser";
+String lineText = "Pencil", sprinkleText = "Sprinkle", eraserText = "Eraser";
 boolean Red=false, Blue=false, Green=false, Yellow=false, Purple=false, Brown=false, Grey=false, White=false, Black=true;
 //
 void colorOverlayDraw() 
