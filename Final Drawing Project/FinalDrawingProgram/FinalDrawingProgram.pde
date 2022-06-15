@@ -1,4 +1,10 @@
-//Global Variables
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+//Global Variables Drawing
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
@@ -9,6 +15,12 @@ color buttonHO=#CBC9C3, bgColour=resetWhite;
 PFont font;
 boolean shapesOverlay=false, strokeOverlay=false, colourOverlay=false, backgroundOverlay=false, lineDraw=true, circleDraw=false, squareDraw=false, triangleDraw=false;
 boolean Redbg=false, Bluebg=false, Greenbg=false, Yellowbg=false, Purplebg=false, Brownbg=false, Greybg=false, Whitebg=true, Blackbg=false;
+//Global Variables Music
+Minim minim; //creates object to access all functions
+int numberofSongs = 3;
+AudioPlayer[] song = new AudioPlayer[numberofSongs]; //creates "Play List" variables holding extensions WAV, AIFF, AU, SND, & MP3
+AudioMetaData[] songMetaData = new AudioMetaData[numberofSongs]; //song1's meta data
+int currentSong = numberofSongs - numberofSongs;
 //
 void setup() 
 {
