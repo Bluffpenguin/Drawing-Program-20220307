@@ -1,3 +1,4 @@
+boolean infiniteOneLoop=false, infiniteAllLoop=false, NoLoop=true;
 //
 void musicSetup() {
   minim = new Minim(this);//Loads from data directory, loadFile should also load from project folder, like loadImage()
@@ -28,11 +29,16 @@ void musicDraw() {
   text(songMetaData[currentSong].title(), displayWidth*1/4, displayHeight*0, displayWidth*1/2, displayHeight*1/10);
   fill(255); //Reset to white for rest of the program
   //Loops
-  if (infiniteOneLoop==true) {song[currentSong].loop(90);} else if(infiniteAllLoop==true) {} else if() {}
+  if (infiniteOneLoop==true) {
+    song[currentSong].loop(90);
+  } else if (infiniteAllLoop==true) {
+  } else if (NoLoop==true) {
+    song[currentSong].loop(0);
+  }
 }//End musicDraw
 //
 void musicmousePressed() {
-  if () {
+  if (NoLoop==true) {
     
   }
 }

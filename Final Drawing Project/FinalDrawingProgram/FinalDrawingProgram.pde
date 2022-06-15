@@ -37,6 +37,7 @@ void draw()
 {
   //
   outlineDraw();
+  musicButtonDraw();
   buttonQuit();
   strokebuttonDraw();
   colourButtonDraw();
