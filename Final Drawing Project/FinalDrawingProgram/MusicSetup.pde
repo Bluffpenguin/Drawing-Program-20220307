@@ -5,6 +5,7 @@ void musicSetup() {
   song[currentSong] = minim.loadFile("MusicDownload/Chasing the Dragon.mp3"); //able to pass absolute path, file name & extension, and URL
   song[currentSong+=1] = minim.loadFile("MusicDownload/Campfire - Telecasted.mp3");
   song[currentSong+=1] = minim.loadFile("MusicDownload/Retribution - NEFFEX.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/Straw Squeak.mp3");
   //song[3]
   //
   currentSong-=currentSong; // currentSong = currentSong - currentSong
@@ -19,15 +20,17 @@ void musicDraw() {
   println("Computer Number of Current Song:", currentSong);
   println("Song Position", song[currentSong].position(), "Song Length", song[currentSong].length() );
   //Loops
-  /*
-  if (infiniteOneLoop==true) {
-   song[currentSong].loop(90);
-   } else if (infiniteAllLoop==true) {
-   song[currentSong].loop(2);
-   } else if (NoLoop==true) {
-   song[currentSong].loop(0);
-   }
-   */
+  if (song[currentSong].isPlaying()) {
+    songPlaying=true;
+  } else {
+    songPlaying=false;
+  }
+  if (song[currentSong].isPlaying()) {
+  } else if (infiniteAllLoop==true && currentSong>=numberofSongs-1) {
+    song[currentSong].rewind();
+    currentSong= currentSong-currentSong;
+    song[currentSong].play();
+  }
 }//End musicDraw
 //
 void musicmousePressed() {
@@ -38,7 +41,7 @@ void musicmousePressed() {
       song[currentSong].loop(90);
     } else if (infiniteAllLoop==true) {
       song[currentSong].pause();
-      song[currentSong].loop(2);
+      song[currentSong].loop(0);
     } else if (NoLoop==true) {
       song[currentSong].pause();
       song[currentSong].loop(0);
@@ -48,16 +51,13 @@ void musicmousePressed() {
   if ( mouseX>=playpauseX && mouseX<=playpauseX+playpauseWidth && mouseY>=playpauseY && mouseY<=playpauseY+playpauseHeight ) {
     if ( song[currentSong].isPlaying() ) {
       song[currentSong].pause();
-      songPlaying=false;
     } else if (song[currentSong].position() >= song[currentSong].length()-song[currentSong].length()*1/6) { //Special Situation: at the end of the song (built in stop button)
       //End of Song Calculation: hardcode 1000 or use formula
       //Alternate formula song1.length() - song1.position() <= 1000
       song[currentSong].rewind();
       song[currentSong].play();
-      songPlaying=true;
     } else {
       song[currentSong].play(); //Parameter is milli-seconds from start of audio file to start of playing
-      songPlaying=true;
     }
   }
   //Next Button

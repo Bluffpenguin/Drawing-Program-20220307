@@ -17,7 +17,7 @@ boolean shapesOverlay=false, strokeOverlay=false, colourOverlay=false, backgroun
 boolean Redbg=false, Bluebg=false, Greenbg=false, Yellowbg=false, Purplebg=false, Brownbg=false, Greybg=false, Whitebg=true, Blackbg=false;
 //Global Variables Music
 Minim minim; //creates object to access all functions
-int numberofSongs = 3;
+int numberofSongs = 4;
 AudioPlayer[] song = new AudioPlayer[numberofSongs]; //creates "Play List" variables holding extensions WAV, AIFF, AU, SND, & MP3
 AudioMetaData[] songMetaData = new AudioMetaData[numberofSongs]; //song1's meta data
 int currentSong = numberofSongs - numberofSongs;
