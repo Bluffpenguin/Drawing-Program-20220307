@@ -261,6 +261,10 @@ void populationSetup()
   loopY=displayHeight*1.2/20;
   loopWidth=displayWidth*0.75/20;
   loopHeight=displayHeight*1/20;
+  musictimerX=displayWidth*13.1/20;
+  musictimerY=displayHeight*0.1/20;
+  musictimerWidth=displayWidth*3.45/20;
+  musictimerHeight=displayHeight*1/20;
   playpic = loadImage("Images/play.png");
   pausepic = loadImage("Images/pause.png");
   nextpic = loadImage("Images/music-forward.png");

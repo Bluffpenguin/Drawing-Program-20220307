@@ -1,4 +1,5 @@
 boolean infiniteOneLoop=false, infiniteAllLoop=false, NoLoop=true;
+float musictimerX, musictimerY, musictimerWidth, musictimerHeight;
 //
 void musicSetup() {
   minim = new Minim(this);//Loads from data directory, loadFile should also load from project folder, like loadImage()
@@ -47,6 +48,8 @@ void musicmousePressed() {
       song[currentSong].loop(0);
     }
   }
+  //
+  //Music Timer
   //Playpause Button
   if ( mouseX>=playpauseX && mouseX<=playpauseX+playpauseWidth && mouseY>=playpauseY && mouseY<=playpauseY+playpauseHeight ) {
     if ( song[currentSong].isPlaying() ) {

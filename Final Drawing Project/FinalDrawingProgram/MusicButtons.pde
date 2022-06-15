@@ -2,8 +2,12 @@ float playpauseX, playpauseY, playpauseWidth, playpauseHeight, forwardX, forward
 String play="";
 PImage playpic, pausepic, nextpic, previouspic, loopAllpic, loopOnepic, noLooppic; 
 boolean songPlaying=false;
+int secondTimer, songLength;
+String musictimer;
 //
 void musicButtonDraw() {
+  secondTimer = song[currentSong].position()/1000;
+  songLength= song[currentSong].length()/1000;
   //Playpause
   if (mouseX>=playpauseX && mouseX<=playpauseX+playpauseWidth && mouseY>=playpauseY && mouseY<=playpauseY+playpauseHeight) {
     fill(buttonHO);
@@ -14,8 +18,20 @@ void musicButtonDraw() {
   }
   if (songPlaying==true) {
     image(pausepic, playpauseX, playpauseY, playpauseWidth, playpauseHeight);
+    fill(black); //Ink
+    textAlign (CENTER, BOTTOM);
+    size = 20;
+    textFont(font, size);
+    text("Playing", playpauseX, playpauseY, playpauseWidth, playpauseHeight*1.2);
+    fill(resetWhite);
   } else {
     image(playpic, playpauseX, playpauseY, playpauseWidth, playpauseHeight);
+    fill(black); //Ink
+    textAlign (CENTER, BOTTOM);
+    size = 20;
+    textFont(font, size);
+    text("Paused", playpauseX, playpauseY, playpauseWidth, playpauseHeight*1.2);
+    fill(resetWhite);
   }
   //Forward Button
   //
@@ -27,6 +43,12 @@ void musicButtonDraw() {
     rect(forwardX, forwardY, forwardWidth, forwardHeight);
   }
   image(nextpic, forwardX, forwardY, forwardWidth, forwardHeight);
+  fill(black); //Ink
+  textAlign (CENTER, BOTTOM);
+  size = 20;
+  textFont(font, size);
+  text("Next Song", forwardX, forwardY, forwardWidth, forwardHeight*1.2);
+  fill(resetWhite);
   //
   //Reverse Button
   if (mouseX>=reverseX && mouseX<=reverseX+reverseWidth && mouseY>=reverseY && mouseY<=reverseY+reverseHeight) {
@@ -37,6 +59,12 @@ void musicButtonDraw() {
     rect(reverseX, reverseY, reverseWidth, reverseHeight);
   }
   image(previouspic, reverseX, reverseY, reverseWidth, reverseHeight);
+  fill(black); //Ink
+  textAlign (CENTER, BOTTOM);
+  size = 20;
+  textFont(font, size);
+  text("Last Song", reverseX, reverseY, reverseWidth, reverseHeight*1.2);
+  fill(resetWhite);
   //
   //Loop Button
   if (mouseX>=loopX && mouseX<=loopX+loopWidth && mouseY>=loopY && mouseY<=loopY+loopHeight) {
@@ -72,6 +100,14 @@ void musicButtonDraw() {
     fill(resetWhite);
   }
   //
+  fill(black);
+  rect(musictimerX, musictimerY, musictimerWidth, musictimerHeight);
+  fill(resetWhite);
+  textAlign (CENTER, CENTER);
+  size = 40;
+  textFont(font, size);
+  text(secondTimer+"/"+songLength, musictimerX, musictimerY, musictimerWidth, musictimerHeight);
+  fill(resetWhite);
 }
 //
 void musicButtonmousePressed() {
@@ -83,8 +119,8 @@ void musicButtonmousePressed() {
       infiniteAllLoop=false;
       infiniteOneLoop=true;
     } else if (infiniteOneLoop) {
-    infiniteOneLoop=false;
-    NoLoop=true;
+      infiniteOneLoop=false;
+      NoLoop=true;
     }
   }
 }
