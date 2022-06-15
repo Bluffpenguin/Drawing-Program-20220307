@@ -14,6 +14,7 @@ void outlineDraw() {
   //Bottom Bar
   rect(BbarX, BbarY, BbarWidth, BbarHeight);
   //Music Display
+  fill(resetWhite);
   rect(musicDisplayX, musicDisplayY, musicDisplayWidth, musicDisplayHeight);
   //Template Display
   rect(templateDisplayX, templateDisplayY, templateDisplayWidth, templateDisplayHeight);

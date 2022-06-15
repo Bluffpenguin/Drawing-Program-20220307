@@ -30,7 +30,9 @@ void setup()
   //
   populationSetup();
   //
+  strokeWeight(3);
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  strokeWeight(reset);
 }//End Setup
 //
 void draw() 
@@ -78,6 +80,7 @@ void mousePressed()
   {
     draw = true;
   }//Button Paper (Drawing Surface)
+  musicButtonmousePressed();
   buttonQuitmousePressed();
   strokebuttonmousePressed();
   buttonShapemousePressed();

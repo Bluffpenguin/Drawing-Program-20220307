@@ -246,21 +246,28 @@ void populationSetup()
   highShapeHeight=displayHeight*0.6/20;
   //
   playpauseX=displayWidth*14/20;
-  playpauseY=displayHeight*0.7/20;
+  playpauseY=displayHeight*1.2/20;
   playpauseWidth=displayWidth*0.75/20;
   playpauseHeight=displayHeight*1/20;
   forwardX=displayWidth*14.9/20;
-  forwardY=displayHeight*0.7/20;
+  forwardY=displayHeight*1.2/20;
   forwardWidth=displayWidth*0.75/20;
   forwardHeight=displayHeight*1/20;
   reverseX=displayWidth*13.10/20;
-  reverseY=displayHeight*0.7/20;
+  reverseY=displayHeight*1.2/20;
   reverseWidth=displayWidth*0.75/20;
   reverseHeight=displayHeight*1/20;
   loopX=displayWidth*15.80/20;
-  loopY=displayHeight*0.7/20;
+  loopY=displayHeight*1.2/20;
   loopWidth=displayWidth*0.75/20;
   loopHeight=displayHeight*1/20;
+  playpic = loadImage("Images/play.png");
+  pausepic = loadImage("Images/pause.png");
+  nextpic = loadImage("Images/music-forward.png");
+  previouspic = loadImage("Images/music-reverse.png");
+  loopAllpic = loadImage("Images/repeat.png");
+  loopOnepic = loadImage("Images/repeat-one.png");
+  noLooppic = loadImage("Images/noLoop.png");
   //
   font = createFont ("Corbel", initialFontSize);
 }//End populationSetup

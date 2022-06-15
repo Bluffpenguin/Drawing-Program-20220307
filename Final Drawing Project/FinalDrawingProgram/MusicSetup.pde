@@ -14,8 +14,8 @@ void musicSetup() {
 }//End musicSetup
 //
 void musicDraw() {
-  if ( song[currentSong].isLooping() ) println("There are", song[currentSong].loopCount(), "loops left");
-  if ( song[currentSong].isPlaying() && !song[currentSong].isLooping() ) println("Play Once");
+  //if ( song[currentSong].isLooping() ) println("There are", song[currentSong].loopCount(), "loops left");
+  //if ( song[currentSong].isPlaying() && !song[currentSong].isLooping() ) println("Play Once");
   //
   println("Computer Number of Current Song:", currentSong);
   println("Song Position", song[currentSong].position(), "Song Length", song[currentSong].length() );
@@ -32,6 +32,10 @@ void musicDraw() {
   if (infiniteOneLoop==true) {
     song[currentSong].loop(90);
   } else if (infiniteAllLoop==true) {
+    if (song[currentSong].position()== song[currentSong].length()) {
+      song[currentSong].rewind();
+      song[currentSong].play();
+    }
   } else if (NoLoop==true) {
     song[currentSong].loop(0);
   }
@@ -39,6 +43,5 @@ void musicDraw() {
 //
 void musicmousePressed() {
   if (NoLoop==true) {
-    
   }
 }
