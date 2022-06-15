@@ -3,8 +3,16 @@ String colorText = "Colour";
 //
 void colourButtonDraw() 
 {
-  fill(resetWhite);
-  rect(colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
+  if (mouseX>=colourButtonX && mouseX<=colourButtonX+colourButtonWidth && mouseY>=colourButtonY && mouseY<=colourButtonY+colourButtonHeight) {
+    fill(buttonHO);
+    rect(colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
+  } else if (colourOverlay==true) {
+    fill(buttonHO);
+    rect(colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
+  } else {
+    fill(resetWhite);
+    rect(colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
+  }
   fill(black); //Ink
   textAlign (CENTER, CENTER);
   size = 40;
@@ -12,9 +20,10 @@ void colourButtonDraw()
   text(colorText, colourButtonX, colourButtonY, colourButtonWidth, colourButtonHeight);
   fill(resetWhite);
   //
-  if (colourOverlay==true) 
-  {
-    colorOverlayDraw();
-  }
-  
 }//End colourButtonDraw
+//
+void colourButtonmousePressed() {
+  if (mouseX>=colourButtonX && mouseX<=colourButtonX+colourButtonWidth && mouseY>=colourButtonY && mouseY<=colourButtonY+colourButtonHeight) {
+    if (colourOverlay==false) {colourOverlay=true;} else {colourOverlay=false;}
+  }
+}
