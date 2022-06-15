@@ -41,6 +41,7 @@ void draw()
     } else {
       stroke(reset);
     }
+    if (lineDraw==false) noStroke();
     strokeWeight(strokeSize);
     fill(drawColor);
     if (lineDraw==true) line( mouseX, mouseY, pmouseX, pmouseY );

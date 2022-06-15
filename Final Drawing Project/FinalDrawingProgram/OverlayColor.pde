@@ -12,7 +12,7 @@ float lineBX, lineBY, lineBWidth, lineBHeight;
 float sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight;
 float eraserX, eraserY, eraserWidth, eraserHeight;
 String lineText = "Pencil", sprinkleText = "Sprinkle", eraserText = "Eraser";
-boolean Red=false, Blue=false, Green=false, Yellow=false, Purple=false, Brown=false, Grey=false, White=false, Black=true;
+boolean Red=false, Blue=false, Green=false, Yellow=false, Purple=false, Brown=false, Grey=false, White=false, Black=true, Eraser=false;
 //
 void colorOverlayDraw() 
 {
@@ -146,49 +146,44 @@ void colorOverlayDraw()
   fill(resetWhite);
   //Color
   if (Red==true) {
-    color(drawColor=red);
     fill(redHO);
     rect(colourRedX, colourRedY, colourRedWidth, colourRedHeight);
   }
   if (Blue==true) {
-    color(drawColor=blue);
     fill(blueHO);
     rect(colourBlueX, colourBlueY, colourBlueWidth, colourBlueHeight);
   }
   if (Green==true) {
-    color(drawColor=green);
     fill(greenHO);
     rect(colourGreenX, colourGreenY, colourGreenWidth, colourGreenHeight);
   }
   if (Yellow==true) {
-    color(drawColor=yellow);
     fill(yellowHO);
     rect(colourYellowX, colourYellowY, colourYellowWidth, colourYellowHeight);
   }
   if (Purple==true) {
-    color(drawColor=purple);
     fill(purpleHO);
     rect(colourPurpleX, colourPurpleY, colourPurpleWidth, colourPurpleHeight);
   }
   if (Brown==true) {
-    color(drawColor=brown);
     fill(brownHO);
     rect(colourBrownX, colourBrownY, colourBrownWidth, colourBrownHeight);
   }
   if (Grey==true) {
-    color(drawColor=grey);
     fill(greyHO);
     rect(colourGreyX, colourGreyY, colourGreyWidth, colourGreyHeight);
   }
   if (White==true) {
-    color(drawColor=resetWhite);
     fill(whiteHO);
     rect(colourWhiteX, colourWhiteY, colourWhiteWidth, colourWhiteHeight);
   }
   if (Black==true) {
-    color(drawColor=black);
     fill(blackHO);
     rect(colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight);
+  }
+  if (Eraser==true) {
+    fill(buttonHO);
+    rect(eraserX, eraserY, eraserWidth, eraserHeight);
   }
   //Hoverover
 }
@@ -198,6 +193,7 @@ void colormousePressed()
   //Red
   if (mouseX>=colourRedX && mouseX<=colourRedX+colourRedWidth && mouseY>=colourRedY && mouseY<=colourRedY+colourRedHeight) 
   {
+    drawColor=red;
     Red=true;
     Blue=false;
     Green=false;
@@ -207,10 +203,12 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //Blue
   if (mouseX>=colourBlueX && mouseX<=colourBlueX+colourBlueWidth && mouseY>=colourBlueY && mouseY<=colourBlueY+colourBlueHeight) 
   {
+    drawColor=blue;
     Red=false;
     Blue=true;
     Green=false;
@@ -220,10 +218,12 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //Green
   if (mouseX>=colourGreenX && mouseX<=colourGreenX+colourGreenWidth && mouseY>=colourGreenY && mouseY<=colourGreenY+colourGreenHeight) 
   {
+    drawColor=green;
     Red=false;
     Blue=false;
     Green=true;
@@ -233,10 +233,12 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //Yellow
   if (mouseX>=colourYellowX && mouseX<=colourYellowX+colourYellowWidth && mouseY>=colourYellowY && mouseY<=colourYellowY+colourYellowHeight) 
   {
+    drawColor=yellow;
     Red=false;
     Blue=false;
     Green=false;
@@ -246,10 +248,12 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //Purple
   if (mouseX>=colourPurpleX && mouseX<=colourPurpleX+colourPurpleWidth && mouseY>=colourPurpleY && mouseY<=colourPurpleY+colourPurpleHeight) 
   {
+    drawColor=purple;
     Red=false;
     Blue=false;
     Green=false;
@@ -259,10 +263,12 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //Brown
   if (mouseX>=colourBrownX && mouseX<=colourBrownX+colourBrownWidth && mouseY>=colourBrownY && mouseY<=colourBrownY+colourBrownHeight) 
   {
+    drawColor=brown;
     Red=false;
     Blue=false;
     Green=false;
@@ -272,10 +278,12 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //Grey
   if (mouseX>=colourGreyX && mouseX<=colourGreyX+colourGreyWidth && mouseY>=colourGreyY && mouseY<=colourGreyY+colourGreyHeight) 
   {
+    drawColor=grey;
     Red=false;
     Blue=false;
     Green=false;
@@ -285,10 +293,12 @@ void colormousePressed()
     Grey=true;
     White=false;
     Black=false;
+    Eraser=false;
   }
   //White
   if (mouseX>=colourWhiteX && mouseX<=colourWhiteX+colourWhiteWidth && mouseY>=colourWhiteY && mouseY<=colourWhiteY+colourWhiteHeight) 
   {
+    drawColor=resetWhite;
     Red=false;
     Blue=false;
     Green=false;
@@ -298,10 +308,12 @@ void colormousePressed()
     Grey=false;
     White=true;
     Black=false;
+    Eraser=false;
   }
   //Black
   if (mouseX>=colourBlackX && mouseX<=colourBlackX+colourBlackWidth && mouseY>=colourBlackY && mouseY<=colourBlackY+colourBlackHeight) 
   {
+    drawColor=black;
     Red=false;
     Blue=false;
     Green=false;
@@ -311,6 +323,19 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=true;
+    Eraser=false;
   }
-  if (mouseX>=eraserX && mouseX<=eraserX+eraserWidth && mouseY>=eraserY && mouseY<=eraserY+eraserHeight) drawColor=color(bgColour);
+  if (mouseX>=eraserX && mouseX<=eraserX+eraserWidth && mouseY>=eraserY && mouseY<=eraserY+eraserHeight) {
+    drawColor=bgColour;
+    Eraser=true;
+    Red=false;
+    Blue=false;
+    Green=false;
+    Yellow=false;
+    Purple=false;
+    Brown=false;
+    Grey=false;
+    White=false;
+    Black=false;
+  };
 }//End colormousePressed
