@@ -14,34 +14,98 @@ void musicSetup() {
 }//End musicSetup
 //
 void musicDraw() {
-  //if ( song[currentSong].isLooping() ) println("There are", song[currentSong].loopCount(), "loops left");
-  //if ( song[currentSong].isPlaying() && !song[currentSong].isLooping() ) println("Play Once");
+  if ( song[currentSong].isLooping() ) println("There are", song[currentSong].loopCount(), "loops left");
   //
   println("Computer Number of Current Song:", currentSong);
   println("Song Position", song[currentSong].position(), "Song Length", song[currentSong].length() );
-  //
-  background (black);
-  rect(displayWidth*1/4, displayHeight*0, displayWidth*1/2, displayHeight*1/10);
-  fill(purple); //Ink, hexidecimal copied from Color Selector
-  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(font, 100); //Change the number until it fits, largest font size
-  text(songMetaData[currentSong].title(), displayWidth*1/4, displayHeight*0, displayWidth*1/2, displayHeight*1/10);
-  fill(255); //Reset to white for rest of the program
   //Loops
+  /*
   if (infiniteOneLoop==true) {
-    song[currentSong].loop(90);
-  } else if (infiniteAllLoop==true) {
-    if (song[currentSong].position()== song[currentSong].length()) {
-      song[currentSong].rewind();
-      song[currentSong].play();
-    }
-  } else if (NoLoop==true) {
-    song[currentSong].loop(0);
-  }
+   song[currentSong].loop(90);
+   } else if (infiniteAllLoop==true) {
+   song[currentSong].loop(2);
+   } else if (NoLoop==true) {
+   song[currentSong].loop(0);
+   }
+   */
 }//End musicDraw
 //
 void musicmousePressed() {
-  if (NoLoop==true) {
+  //Loop Button
+  if (mouseX>=loopX && mouseX<=loopX+loopWidth && mouseY>=loopY && mouseY<=loopY+loopHeight) {
+    if (infiniteOneLoop==true) {
+      song[currentSong].pause();
+      song[currentSong].loop(90);
+    } else if (infiniteAllLoop==true) {
+      song[currentSong].pause();
+      song[currentSong].loop(2);
+    } else if (NoLoop==true) {
+      song[currentSong].pause();
+      song[currentSong].loop(0);
+    }
+  }
+  //Playpause Button
+  if ( mouseX>=playpauseX && mouseX<=playpauseX+playpauseWidth && mouseY>=playpauseY && mouseY<=playpauseY+playpauseHeight ) {
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      songPlaying=false;
+    } else if (song[currentSong].position() >= song[currentSong].length()-song[currentSong].length()*1/6) { //Special Situation: at the end of the song (built in stop button)
+      //End of Song Calculation: hardcode 1000 or use formula
+      //Alternate formula song1.length() - song1.position() <= 1000
+      song[currentSong].rewind();
+      song[currentSong].play();
+      songPlaying=true;
+    } else {
+      song[currentSong].play(); //Parameter is milli-seconds from start of audio file to start of playing
+      songPlaying=true;
+    }
+  }
+  //Next Button
+  if (mouseX>=forwardX && mouseX<=forwardX+forwardWidth && mouseY>=forwardY && mouseY<=forwardY+forwardHeight) {
+    if ( song[currentSong].isPlaying() ) {
+      //Serious Problems, playing multiple songs at the same time
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      if ( currentSong >= song.length-1) {//CATCH ArrayIndexOutOfBoundsException
+        currentSong -= currentSong;
+      } else {
+        currentSong++; //Error if greater than 2
+      }
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind(); ////Built-in rewind feature so all songs start at ZERO
+      if ( currentSong >= song.length-1) {//CATCH ArrayIndexOutOfBoundsException
+        currentSong -= currentSong;
+      } else {
+        currentSong++; //Error if greater than 2
+      }
+      song[currentSong].play();
+    }
+  }
+  //Previous Button
+  if (mouseX>=reverseX && mouseX<=reverseX+reverseWidth && mouseY>=reverseY && mouseY<=reverseY+reverseHeight) {
+    if (song[currentSong].position()<=song[currentSong].length()*1/20) {
+      if ( song[currentSong].isPlaying()) {
+        //Serious Problems, playing multiple songs at the same time
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        if ( currentSong <= 0) {//CATCH ArrayIndexOutOfBoundsException
+          currentSong = song.length-1;
+        } else {
+          currentSong--; //Error if greater than 2
+        }
+        song[currentSong].play();
+      } else {
+        song[currentSong].rewind(); ////Built-in rewind feature so all songs start at ZERO
+        if ( currentSong <= 0) {//CATCH ArrayIndexOutOfBoundsException
+          currentSong = song.length-1;
+        } else {
+          currentSong--; //Error if greater than 2
+        }
+        song[currentSong].play();
+      }//End Back Button
+    } else {
+      song[currentSong].rewind();
+    }
   }
 }

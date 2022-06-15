@@ -5,17 +5,39 @@ boolean songPlaying=false;
 //
 void musicButtonDraw() {
   //Playpause
-  rect(playpauseX, playpauseY, playpauseWidth, playpauseHeight);
+  if (mouseX>=playpauseX && mouseX<=playpauseX+playpauseWidth && mouseY>=playpauseY && mouseY<=playpauseY+playpauseHeight) {
+    fill(buttonHO);
+    rect(playpauseX, playpauseY, playpauseWidth, playpauseHeight);
+  } else {
+    fill(resetWhite);
+    rect(playpauseX, playpauseY, playpauseWidth, playpauseHeight);
+  }
   if (songPlaying==true) {
     image(pausepic, playpauseX, playpauseY, playpauseWidth, playpauseHeight);
   } else {
     image(playpic, playpauseX, playpauseY, playpauseWidth, playpauseHeight);
   }
+  //Forward Button
   //
-  rect(forwardX, forwardY, forwardWidth, forwardHeight);
+  if (mouseX>=forwardX && mouseX<=forwardX+forwardWidth && mouseY>=forwardY && mouseY<=forwardY+forwardHeight) {
+    fill(buttonHO);
+    rect(forwardX, forwardY, forwardWidth, forwardHeight);
+  } else {
+    fill(resetWhite);
+    rect(forwardX, forwardY, forwardWidth, forwardHeight);
+  }
   image(nextpic, forwardX, forwardY, forwardWidth, forwardHeight);
-  rect(reverseX, reverseY, reverseWidth, reverseHeight);
+  //
+  //Reverse Button
+  if (mouseX>=reverseX && mouseX<=reverseX+reverseWidth && mouseY>=reverseY && mouseY<=reverseY+reverseHeight) {
+    fill(buttonHO);
+    rect(reverseX, reverseY, reverseWidth, reverseHeight);
+  } else {
+    fill(resetWhite);
+    rect(reverseX, reverseY, reverseWidth, reverseHeight);
+  }
   image(previouspic, reverseX, reverseY, reverseWidth, reverseHeight);
+  //
   //Loop Button
   if (mouseX>=loopX && mouseX<=loopX+loopWidth && mouseY>=loopY && mouseY<=loopY+loopHeight) {
     fill(buttonHO);

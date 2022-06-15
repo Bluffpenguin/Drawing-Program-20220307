@@ -29,6 +29,7 @@ void setup()
   fullScreen(); //displayWidth, displayHeight
   //
   populationSetup();
+  musicSetup();
   //
   strokeWeight(3);
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -40,6 +41,7 @@ void draw()
   //
   outlineDraw();
   musicButtonDraw();
+  musicDraw();
   buttonQuit();
   strokebuttonDraw();
   colourButtonDraw();
@@ -81,6 +83,7 @@ void mousePressed()
     draw = true;
   }//Button Paper (Drawing Surface)
   musicButtonmousePressed();
+  musicmousePressed();
   buttonQuitmousePressed();
   strokebuttonmousePressed();
   buttonShapemousePressed();
