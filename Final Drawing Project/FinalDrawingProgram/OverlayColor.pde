@@ -135,15 +135,6 @@ void colorOverlayDraw()
     fill(resetWhite);
     rect(eraserX, eraserY, eraserWidth, eraserHeight);
   }
-  fill(black); //ink
-  //Text
-  textAlign (CENTER, CENTER);
-  size = 40;
-  textFont(font, size);
-  text(lineText, lineBX, lineBY, lineBWidth, lineBHeight);
-  text(sprinkleText, sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
-  text(eraserText, eraserX, eraserY, eraserWidth, eraserHeight);
-  fill(resetWhite);
   //Color
   if (Red==true) {
     fill(redHO);
@@ -185,7 +176,15 @@ void colorOverlayDraw()
     fill(buttonHO);
     rect(eraserX, eraserY, eraserWidth, eraserHeight);
   }
-  //Hoverover
+  fill(black); //ink
+  //Text
+  textAlign (CENTER, CENTER);
+  size = 40;
+  textFont(font, size);
+  text(lineText, lineBX, lineBY, lineBWidth, lineBHeight);
+  text(sprinkleText, sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
+  text(eraserText, eraserX, eraserY, eraserWidth, eraserHeight);
+  fill(resetWhite);
 }
 //
 void colormousePressed() 
