@@ -19,7 +19,7 @@ void populationSetup()
   dropHeight =displayHeight*16/20;
   BbarX =displayWidth*0;
   BbarY =displayHeight*18/20;
-  BbarWidth =displayWidth*3/10;
+  BbarWidth =displayWidth*6/20;
   BbarHeight =displayHeight*2/20;
   musicDisplayX =displayWidth*3/10;
   musicDisplayY =displayHeight*0;
@@ -244,6 +244,31 @@ void populationSetup()
   highShapeY=displayHeight*17.2/20;
   highShapeWidth=displayWidth*0.5/20;
   highShapeHeight=displayHeight*0.6/20;
+  //
+  notemplateX=displayWidth*6.5/20;
+  notemplateY=displayHeight*17.8/20;
+  notemplateWidth=displayWidth*2/20;
+  notemplateHeight=displayHeight*2/20;
+  templateX1=displayWidth*9/20;
+  templateY1=displayHeight*17.8/20;
+  templateWidth1=displayWidth*2/20;
+  templateHeight1=displayHeight*2/20;
+  templateX2=displayWidth*11.5/20;
+  templateY2=displayHeight*17.8/20;
+  templateWidth2=displayWidth*2/20;
+  templateHeight2=displayHeight*2/20;
+  templateX3=displayWidth*14/20;
+  templateY3=displayHeight*17.8/20;
+  templateWidth3=displayWidth*2/20;
+  templateHeight3=displayHeight*2/20;
+  templateX4=displayWidth*16.5/20;
+  templateY4=displayHeight*17.8/20;
+  templateWidth4=displayWidth*2/20;
+  templateHeight4=displayHeight*2/20;
+  template1 = loadImage("Images/color.jpg");
+  template2 = loadImage("Images/color2.jpg");
+  template3 = loadImage("Images/color3.png");
+  template4 = loadImage("Images/color4.jpg");
   //
   playpauseX=displayWidth*14/20;
   playpauseY=displayHeight*1.2/20;
