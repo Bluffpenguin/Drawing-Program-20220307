@@ -265,6 +265,10 @@ void populationSetup()
   musictimerY=displayHeight*0.1/20;
   musictimerWidth=displayWidth*3.45/20;
   musictimerHeight=displayHeight*1/20;
+  musicdisplayX=displayWidth*16.7/20;
+  musicdisplayY=displayHeight*0.1/20;
+  musicdisplayWidth=displayWidth*3.3/20;
+  musicdisplayHeight=displayHeight*2.4/20;
   playpic = loadImage("Images/play.png");
   pausepic = loadImage("Images/pause.png");
   nextpic = loadImage("Images/music-forward.png");
@@ -274,4 +278,5 @@ void populationSetup()
   noLooppic = loadImage("Images/noLoop.png");
   //
   font = createFont ("Corbel", initialFontSize);
+  fontB = createFont ("Corbel Bold", initialFontSize);
 }//End populationSetup

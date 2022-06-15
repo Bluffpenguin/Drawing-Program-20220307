@@ -12,12 +12,12 @@ float squareDrawWidth, squareDrawHeight;
 int reset=1, initialFontSize=55, strokeSize=2, shapeSize=1;
 color quitButtonColour, drawColor, resetWhite=255, red=#FF0303, redHO=#952F2F, black=0, blackHO=#5A5956, blue=#0F5CF2, blueHO=#071D90, green=#47BC2E, greenHO=#388635, yellow=#F2FA19, yellowHO=#96A010, purple=#B620F2, purpleHO=#5D0B98, brown=#795E23, brownHO=#5A3F0B, grey=#B7B4AE, greyHO=#484746, whiteHO=#D8D5CD;
 color buttonHO=#CBC9C3, bgColour=resetWhite;
-PFont font;
+PFont font, fontB;
 boolean shapesOverlay=false, strokeOverlay=false, colourOverlay=false, backgroundOverlay=false, lineDraw=true, circleDraw=false, squareDraw=false, triangleDraw=false;
 boolean Redbg=false, Bluebg=false, Greenbg=false, Yellowbg=false, Purplebg=false, Brownbg=false, Greybg=false, Whitebg=true, Blackbg=false;
 //Global Variables Music
 Minim minim; //creates object to access all functions
-int numberofSongs = 4;
+int numberofSongs = 5;
 AudioPlayer[] song = new AudioPlayer[numberofSongs]; //creates "Play List" variables holding extensions WAV, AIFF, AU, SND, & MP3
 AudioMetaData[] songMetaData = new AudioMetaData[numberofSongs]; //song1's meta data
 int currentSong = numberofSongs - numberofSongs;
@@ -39,6 +39,8 @@ void setup()
 void draw() 
 {
   //
+  //String[] fontList = PFont.list(); //To list all fonts available on OS
+  //printArray(fontList); 
   outlineDraw();
   musicButtonDraw();
   musicDraw();

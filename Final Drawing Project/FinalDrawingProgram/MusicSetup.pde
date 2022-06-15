@@ -1,12 +1,14 @@
 boolean infiniteOneLoop=false, infiniteAllLoop=false, NoLoop=true;
 float musictimerX, musictimerY, musictimerWidth, musictimerHeight;
+float musicdisplayX, musicdisplayY, musicdisplayWidth, musicdisplayHeight;
 //
 void musicSetup() {
   minim = new Minim(this);//Loads from data directory, loadFile should also load from project folder, like loadImage()
   song[currentSong] = minim.loadFile("MusicDownload/Chasing the Dragon.mp3"); //able to pass absolute path, file name & extension, and URL
   song[currentSong+=1] = minim.loadFile("MusicDownload/Campfire - Telecasted.mp3");
   song[currentSong+=1] = minim.loadFile("MusicDownload/Retribution - NEFFEX.mp3");
-  song[currentSong+=1] = minim.loadFile("MusicDownload/Straw Squeak.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/Zula.mp3");
+  song[currentSong+=1] = minim.loadFile("MusicDownload/Gunpowder Tea.mp3");
   //song[3]
   //
   currentSong-=currentSong; // currentSong = currentSong - currentSong
@@ -32,6 +34,21 @@ void musicDraw() {
     currentSong= currentSong-currentSong;
     song[currentSong].play();
   }
+  //
+  //Music Display
+  fill(black);
+  rect(musicdisplayX, musicdisplayY, musicdisplayWidth, musicdisplayHeight);
+  fill(resetWhite);
+  textAlign (CENTER, TOP);
+  size = 40;
+  textFont(fontB, size);
+  text(songMetaData[currentSong].title(), musicdisplayX, musicdisplayY, musicdisplayWidth, musicdisplayHeight);
+  textAlign (LEFT, LEFT);
+  textFont(font, 20);
+  text("Artists:"+"  "+songMetaData[currentSong].author(), musicdisplayX, musicdisplayY*10, musicdisplayWidth, musicdisplayHeight);
+  text("Genre:"+"  "+songMetaData[currentSong].genre(), musicdisplayX, musicdisplayY*15, musicdisplayWidth, musicdisplayHeight);
+  fill(resetWhite);
+  
 }//End musicDraw
 //
 void musicmousePressed() {
@@ -49,7 +66,6 @@ void musicmousePressed() {
     }
   }
   //
-  //Music Timer
   //Playpause Button
   if ( mouseX>=playpauseX && mouseX<=playpauseX+playpauseWidth && mouseY>=playpauseY && mouseY<=playpauseY+playpauseHeight ) {
     if ( song[currentSong].isPlaying() ) {
