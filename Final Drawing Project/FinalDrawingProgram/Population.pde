@@ -115,6 +115,12 @@ void populationSetup()
   sprinkleY =displayHeight*3.3333/20;
   sprinkleWidth =displayWidth*3.4/20;
   sprinkleHeight =displayHeight*1.3333/20;
+  splatterWidth1=displayWidth*2/50;
+  splatterHeight1=displayHeight*1/50;
+  splatterWidth2=displayWidth*-2/50;
+  splatterHeight2=displayHeight*-1/50;
+  splatterWidth3=displayWidth*-2/50;
+  splatterHeight3=displayHeight*1/50;
   eraserX =displayWidth*2.6/20;
   eraserY =displayHeight*4.6666/20;
   eraserWidth =displayWidth*3.4/20;

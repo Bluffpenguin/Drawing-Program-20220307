@@ -188,7 +188,7 @@ void colorOverlayDraw()
   fill(resetWhite);
   //
   //Splatter
-  splatterDiameter = random(displayHeight*1/100, displayWidth*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
+  splatterDiameter = random(displayHeight*1/100, displayWidth*1/50); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
   splatterRadius = splatterDiameter*1/2;
   println (splatterRadius);
   splatterX1 = random( mouseX+splatterRadius, ( ( mouseX+splatterWidth1) - splatterRadius) );
@@ -367,9 +367,9 @@ void colormousePressed()
 void colormouseDragged() {
   noStroke(); //Shape outline
   fill(drawColor);
-  ellipse( splatterX1, splatterY1, splatterWidth1, splatterHeight1 );
-  ellipse( splatterX2, splatterY2, splatterWidth2, splatterHeight2 );
-  ellipse( splatterX3, splatterY3, splatterWidth2, splatterHeight2 );
+  ellipse( splatterX1, splatterY1, splatterDiameter, splatterDiameter );
+  ellipse( splatterX2, splatterY2, splatterDiameter, splatterDiameter );
+  ellipse( splatterX3, splatterY3, splatterDiameter, splatterDiameter );
   stroke(reset);
   fill(resetWhite); //reset to first colour (i.e blackReset)
 }
