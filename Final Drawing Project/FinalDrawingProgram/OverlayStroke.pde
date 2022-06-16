@@ -81,7 +81,7 @@ void overlayStrokeDraw()
   textAlign (CENTER, CENTER);
   size = 40;
   textFont(font, size);
-  text("+1", strokeInput2X, strokeInput2Y, strokeInput2Width, strokeInput2Height);
+  text("-1", strokeInput2X, strokeInput2Y, strokeInput2Width, strokeInput2Height);
   fill(resetWhite);
   //button 3 (+1)
   if (mouseX>=strokeInput3X && mouseX<=strokeInput3X+strokeInput3Width && mouseY>=strokeInput3Y && mouseY<=strokeInput3Y+strokeInput3Height) {
@@ -128,12 +128,16 @@ void overlayStrokemousePresser() {
   }
   //
   //
-  if (mouseX>=strokeInput1X && mouseX<=strokeInput1X+strokeInput1Width && mouseY>=strokeInput1Y && mouseY<=strokeInput1Y+strokeInput1Height) {
+  if (mouseX>=strokeInput1X && mouseX<=strokeInput1X+strokeInput1Width && mouseY>=strokeInput1Y && mouseY<=strokeInput1Y+strokeInput1Height  && strokeSize>5) {
+    strokeSize=strokeSize-5;
   }
-  if (mouseX>=strokeInput2X && mouseX<=strokeInput2X+strokeInput2Width && mouseY>=strokeInput2Y && mouseY<=strokeInput2Y+strokeInput2Height) {
+  if (mouseX>=strokeInput2X && mouseX<=strokeInput2X+strokeInput2Width && mouseY>=strokeInput2Y && mouseY<=strokeInput2Y+strokeInput2Height  && strokeSize>1) {
+    strokeSize=strokeSize-1;
   }
   if (mouseX>=strokeInput3X && mouseX<=strokeInput3X+strokeInput3Width && mouseY>=strokeInput3Y && mouseY<=strokeInput3Y+strokeInput3Height) {
+    strokeSize=strokeSize+1;
   }
   if (mouseX>=strokeInput4X && mouseX<=strokeInput4X+strokeInput4Width && mouseY>=strokeInput4Y && mouseY<=strokeInput4Y+strokeInput4Height) {
+    strokeSize=strokeSize+5;
   }
 }//End overlayStrokemousePressed
