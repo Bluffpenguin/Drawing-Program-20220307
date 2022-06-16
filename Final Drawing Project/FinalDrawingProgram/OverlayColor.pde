@@ -118,11 +118,17 @@ void colorOverlayDraw()
   if (mouseX>=lineBX && mouseX<=lineBX+lineBWidth && mouseY>=lineBY && mouseY<=lineBY+lineBHeight) {
     fill(buttonHO);
     rect(lineBX, lineBY, lineBWidth, lineBHeight);
+  } else if (lineDraw==true) {
+    fill(buttonHO);
+    rect(lineBX, lineBY, lineBWidth, lineBHeight);
   } else {
     fill(resetWhite);
     rect(lineBX, lineBY, lineBWidth, lineBHeight);
   }
   if (mouseX>=sprinkleX && mouseX<=sprinkleX+sprinkleWidth && mouseY>=sprinkleY && mouseY<=sprinkleY+sprinkleHeight) {
+    fill(buttonHO);
+    rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
+  } else if (sprinkle==true) {
     fill(buttonHO);
     rect(sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
   } else {
@@ -188,7 +194,7 @@ void colorOverlayDraw()
   fill(resetWhite);
   //
   //Splatter
-  splatterDiameter = random(displayHeight*1/100, displayWidth*1/50); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
+  splatterDiameter = random(displayHeight*1/150, displayWidth*1/100); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
   splatterRadius = splatterDiameter*1/2;
   println (splatterRadius);
   splatterX1 = random( mouseX+splatterRadius, ( ( mouseX+splatterWidth1) - splatterRadius) );
@@ -339,6 +345,7 @@ void colormousePressed()
   if (mouseX>=eraserX && mouseX<=eraserX+eraserWidth && mouseY>=eraserY && mouseY<=eraserY+eraserHeight) {
     drawColor=bgColour;
     Eraser=true;
+    lineDraw=true;
     Red=false;
     Blue=false;
     Green=false;
@@ -348,6 +355,7 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
+    sprinkle=false;
   }
   //
   if (mouseX>=lineBX && mouseX<=lineBX+lineBWidth && mouseY>=lineBY && mouseY<=lineBY+lineBHeight) {

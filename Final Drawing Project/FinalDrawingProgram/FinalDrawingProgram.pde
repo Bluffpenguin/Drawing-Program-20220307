@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
-float squareDrawWidth, squareDrawHeight;
+float squareDrawWidth, squareDrawHeight, triangleX1, triangleY1, triangleX2, triangleY2, triangleX3, triangleY3;
 int reset=1, initialFontSize=55, strokeSize=2, shapeSize=1;
 color quitButtonColour, drawColor, resetWhite=255, red=#FF0303, redHO=#952F2F, black=0, blackHO=#5A5956, blue=#0F5CF2, blueHO=#071D90, green=#47BC2E, greenHO=#388635, yellow=#F2FA19, yellowHO=#96A010, purple=#B620F2, purpleHO=#5D0B98, brown=#795E23, brownHO=#5A3F0B, grey=#B7B4AE, greyHO=#484746, whiteHO=#D8D5CD;
 color buttonHO=#CBC9C3, bgColour=resetWhite;
@@ -70,7 +70,7 @@ void draw()
     if (lineDraw==true) line( mouseX, mouseY, pmouseX, pmouseY );
     if (circleDraw==true) ellipse( mouseX, mouseY, drawingDiameter*shapeSize, drawingDiameter*shapeSize);
     if (squareDraw==true) rect(mouseX, mouseY, squareDrawWidth*shapeSize/2, squareDrawHeight*shapeSize/2);
-    //if (triangleDraw==true) triangle();
+    if (triangleDraw==true) triangle( mouseX-(displayWidth/50*shapeSize), mouseY+(displayHeight/25*shapeSize), mouseX, mouseY, mouseX+(displayWidth/50*shapeSize), mouseY+(displayHeight/25*shapeSize));;
     fill(resetWhite);
     strokeWeight(reset);
     stroke(reset);
