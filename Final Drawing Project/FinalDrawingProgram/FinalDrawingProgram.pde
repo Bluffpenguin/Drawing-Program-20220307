@@ -92,6 +92,7 @@ void mousePressed()
   buttonShapemousePressed();
   colourButtonmousePressed();
   backgroundButtonmousePressed();
+  if (templateOverlay==true) overlayTemplatemousePressed();
   if (colourOverlay==true) colormousePressed();
   if (shapesOverlay==true) overlayShapemousePressed();
   if (backgroundOverlay==true) backgroundmousePressed();
