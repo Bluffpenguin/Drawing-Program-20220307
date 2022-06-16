@@ -31,9 +31,17 @@ void populationSetup()
   templateDisplayHeight =displayHeight*2.5/20;
   //
   quitButtonX =displayWidth*0;
-  quitButtonY =displayHeight*19/20;
+  quitButtonY =displayHeight*18/20;
   quitButtonWidth =displayWidth*1/10;
-  quitButtonHeight =displayHeight*1/20;
+  quitButtonHeight =displayHeight*2/20;
+  saveButtonX=displayWidth*1/10;
+  saveButtonY=displayHeight*18/20;
+  saveButtonWidth=displayWidth*1/10;
+  saveButtonHeight=displayHeight*2/20;
+  clearButtonX=displayWidth*2/10;
+  clearButtonY=displayHeight*18/20;
+  clearButtonWidth=displayWidth*1/10;
+  clearButtonHeight=displayHeight*2/20;
   //
   colourButtonX =displayWidth*0;
   colourButtonY =displayHeight*0;

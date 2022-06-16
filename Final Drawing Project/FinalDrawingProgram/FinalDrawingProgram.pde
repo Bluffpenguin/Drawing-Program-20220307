@@ -45,6 +45,8 @@ void draw()
   musicButtonDraw();
   musicDraw();
   buttonQuit();
+  clearButtonDraw();
+  saveButtonDraw();
   strokebuttonDraw();
   colourButtonDraw();
   buttonBackgroundDraw();
@@ -75,9 +77,6 @@ void draw()
   }//End Line Draw
 }//End Draw
 //
-void keyPressed() {
-  saveButtonKeypressed();
-}//End keyPressed
 //
 void mousePressed() 
 {
@@ -88,8 +87,11 @@ void mousePressed()
   musicButtonmousePressed();
   musicmousePressed();
   buttonQuitmousePressed();
+  saveButtonmousePressed();
+  clearButtonmousePressed();
   strokebuttonmousePressed();
   buttonShapemousePressed();
+  overlayStrokemousePresser();
   colourButtonmousePressed();
   backgroundButtonmousePressed();
   buttonTemplatemousePressed();

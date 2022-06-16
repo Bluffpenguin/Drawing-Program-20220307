@@ -13,9 +13,9 @@ void buttonQuit()
   //Quit Button Hoverover
   if (mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) 
   {
-    quitButtonColour = red;
+    quitButtonColour = redHO;
   } else {
-    quitButtonColour = black;
+    quitButtonColour = red;
   }//End Hoverover
   //
   fill(black); //Ink
