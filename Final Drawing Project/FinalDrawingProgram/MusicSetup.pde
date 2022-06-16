@@ -46,7 +46,7 @@ void musicDraw() {
   textAlign (LEFT, LEFT);
   textFont(font, 20);
   text("Artists:"+"  "+songMetaData[currentSong].author(), musicdisplayX, musicdisplayY*10, musicdisplayWidth, musicdisplayHeight);
-  text("Genre:"+"  "+songMetaData[currentSong].genre(), musicdisplayX, musicdisplayY*15, musicdisplayWidth, musicdisplayHeight);
+  text("Genre"+"  "+songMetaData[currentSong].genre(), musicdisplayX, musicdisplayY*15, musicdisplayWidth, musicdisplayHeight);
   fill(resetWhite);
   
 }//End musicDraw

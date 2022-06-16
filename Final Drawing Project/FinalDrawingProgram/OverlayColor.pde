@@ -11,6 +11,7 @@ float colourBlackX, colourBlackY, colourBlackWidth, colourBlackHeight;
 float lineBX, lineBY, lineBWidth, lineBHeight;
 float sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight;
 float eraserX, eraserY, eraserWidth, eraserHeight;
+float splatterX1, splatterY1, splatterWidth1, splatterHeight1, splatterX2, splatterY2, splatterX3, splatterY3, splatterDiameter, splatterRadius, splatterWidth2, splatterHeight2, splatterWidth3, splatterHeight3;
 String lineText = "Pencil", sprinkleText = "Sprinkle", eraserText = "Eraser";
 boolean Red=false, Blue=false, Green=false, Yellow=false, Purple=false, Brown=false, Grey=false, White=false, Black=true, Eraser=false;
 //
@@ -185,6 +186,17 @@ void colorOverlayDraw()
   text(sprinkleText, sprinkleX, sprinkleY, sprinkleWidth, sprinkleHeight);
   text(eraserText, eraserX, eraserY, eraserWidth, eraserHeight);
   fill(resetWhite);
+  //
+  //Splatter
+  splatterDiameter = random(displayHeight*1/100, displayWidth*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
+  splatterRadius = splatterDiameter*1/2;
+  println (splatterRadius);
+  splatterX1 = random( mouseX+splatterRadius, ( ( mouseX+splatterWidth1) - splatterRadius) );
+  splatterY1 = random( mouseY+splatterRadius, ( ( mouseY+splatterHeight1) - splatterRadius) );
+  splatterX2 = random( mouseX+splatterRadius, ( ( mouseX+splatterWidth2) - splatterRadius) );
+  splatterY2 = random( mouseY+splatterRadius, ( ( mouseY+splatterHeight2) - splatterRadius) );
+  splatterX3 = random( mouseX+splatterRadius, ( ( mouseX+splatterWidth3) - splatterRadius) );
+  splatterY3 = random( mouseY+splatterRadius, ( ( mouseY+splatterHeight3) - splatterRadius) );
 }
 //
 void colormousePressed() 
@@ -336,5 +348,28 @@ void colormousePressed()
     Grey=false;
     White=false;
     Black=false;
-  };
+  }
+  //
+  if (mouseX>=lineBX && mouseX<=lineBX+lineBWidth && mouseY>=lineBY && mouseY<=lineBY+lineBHeight) {
+    lineDraw=true;
+    circleDraw=false;
+    squareDraw=false;
+    sprinkle=false;
+  }
+  if (mouseX>=sprinkleX && mouseX<=sprinkleX+sprinkleWidth && mouseY>=sprinkleY && mouseY<=sprinkleY+sprinkleHeight) {
+    lineDraw=false;
+    circleDraw=false;
+    squareDraw=false;
+    sprinkle=true;
+  }
 }//End colormousePressed
+//
+void colormouseDragged() {
+  noStroke(); //Shape outline
+  fill(drawColor);
+  ellipse( splatterX1, splatterY1, splatterWidth1, splatterHeight1 );
+  ellipse( splatterX2, splatterY2, splatterWidth2, splatterHeight2 );
+  ellipse( splatterX3, splatterY3, splatterWidth2, splatterHeight2 );
+  stroke(reset);
+  fill(resetWhite); //reset to first colour (i.e blackReset)
+}
